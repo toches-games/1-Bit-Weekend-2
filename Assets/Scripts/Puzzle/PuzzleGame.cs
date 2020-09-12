@@ -143,9 +143,9 @@ public class PuzzleGame : MonoBehaviour
             Vector2 targetDirection = (targetBlankSpacePosition - initPosition).normalized;
             Quaternion targetRotation = Quaternion.FromToRotation(Vector3.right, targetDirection);
 
-            Figure tempFigure = Instantiate(figures[randomFigureIndex], initPosition, targetRotation).GetComponent<Figure>();
+            Figure tempFigure = Instantiate(figures[int.Parse(blankSpaces.GetChild(currentFigureIndex).name)], initPosition, targetRotation).GetComponent<Figure>();
             tempFigure.TargetDirection = targetDirection;
-            tempFigure.TargetIndex = randomFigureIndex;
+            tempFigure.TargetIndex = currentFigureIndex;
             tempFigure.TargetRotation = targetRotation * Quaternion.Euler(0, 0, 90);
         }
     }
