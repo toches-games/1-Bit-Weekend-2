@@ -10,9 +10,12 @@ public class Figure : MonoBehaviour
     [Range(0, 5)]
     public int speed = 5;
 
+    //Direccion a la que se moverá
     public Vector2 TargetDirection { get; set; }
 
+    //Index al que pertenece esta figura, se comprueba con el index del espacio en blanco correcto
     public int TargetIndex { get; set; }
+    
     #endregion
 
     #region Private variables
@@ -44,11 +47,13 @@ public class Figure : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("CorrectPosition"))
+        //Si no choca con un espacio en blanco ni es la posición correcta no hace nada
+        if (!other.CompareTag("SpaceBlank"))
         {
             return;
         }
 
+        //Si choca con el espacio en blanco siendo este la posición correcta
         if(other.transform.GetSiblingIndex() == TargetIndex)
         {
             rig.velocity = Vector2.zero;

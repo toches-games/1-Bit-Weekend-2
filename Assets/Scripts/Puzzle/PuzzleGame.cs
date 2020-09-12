@@ -68,13 +68,16 @@ public class PuzzleGame : MonoBehaviour
 
         float angle = 360f / figures.Length;
 
+        //Si presiona algun boton del raton o las teclas para moverse
         if (leftClick || rightClick || h != 0)
         {
+            //Se gira hacia la derecha >
             if (leftClick || h > 0)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z - angle), rotationSpeed * Time.deltaTime);
             }
 
+            //Se gira hacia la izquierda <
             if(rightClick || h < 0)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + angle), rotationSpeed * Time.deltaTime);
