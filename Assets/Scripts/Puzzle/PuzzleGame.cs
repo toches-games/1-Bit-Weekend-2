@@ -26,7 +26,7 @@ public class PuzzleGame : MonoBehaviour
 
     //Radio del círculo del puzzle
     [Range(0, 10)]
-    public int radius = 5;
+    public float radius = 5;
 
     //Velocidad de rotación del círculo
     [Range(0, 5)]
@@ -39,18 +39,17 @@ public class PuzzleGame : MonoBehaviour
     //Guarda la posición inicial del puzzle
     Vector2 initPosition;
 
-    //Referencia al capsule collider
-    CapsuleCollider2D capsuleCollider;
-
     //Guarda el index de la figura actual
     int currentFigureIndex;
+
+    //Referencia al renderer de la figura actual
+    SpriteRenderer tempRenderer;
 
     #endregion
 
     void Awake()
     {
         initPosition = transform.position;
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Start is called before the first frame update
@@ -135,7 +134,9 @@ public class PuzzleGame : MonoBehaviour
             Transform targetBlankSpace = blankSpaces.GetChild(randomBlankSpaceIndex);
 
             currentFigureIndex = randomFigureIndex;
-            blankSpaces.GetChild(currentFigureIndex).GetComponent<SpriteRenderer>().color = Color.red;
+
+            tempRenderer = blankSpaces.GetChild(currentFigureIndex).GetComponent<SpriteRenderer>();
+            tempRenderer.color = new Color(tempRenderer.color.r, tempRenderer.color.g, tempRenderer.color.b, 1);
 
             yield return new WaitForSeconds(reactionDelay);
 
@@ -158,7 +159,7 @@ public class PuzzleGame : MonoBehaviour
         //Si lo que se sale es la figura que se colocó en una posición incorrecta
         if (collision.CompareTag("CorrectPosition"))
         {
-            blankSpaces.GetChild(currentFigureIndex).GetComponent<SpriteRenderer>().color = Color.white;
+            tempRenderer.color = new Color(tempRenderer.color.r, tempRenderer.color.g, tempRenderer.color.b, 0);
         }
         
         Destroy(collision.gameObject);

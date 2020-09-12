@@ -186,7 +186,7 @@ MonoBehaviour:
   - {fileID: 5244121324593710076, guid: d3aa5d2e9a780384ab63ec423f810806, type: 3}
   figureDelay: 5
   reactionDelay: 2
-  radius: 4
+  radius: 3.5
   rotationSpeed: 3
 --- !u!58 &181136685
 CircleCollider2D:
