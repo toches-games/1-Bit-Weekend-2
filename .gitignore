@@ -69,3 +69,5 @@ fmod_editor.log
 /FMOD/**.unsaved
 /FMOD/**.cache
 /FMOD/**.restore
+/FMOD/*.
+/FMOD/Build/*
