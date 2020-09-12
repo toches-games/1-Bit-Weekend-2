@@ -129,18 +129,6 @@ public class PuzzleGame : MonoBehaviour
                 yield break;
             }
 
-            //Si solo hay menos de cuatro opciones se pone mas dificil
-            else if(blankSpaces.childCount <= 4)
-            {
-                figureDelay = 2;
-            }
-
-            //Si solo hay menos de ocho opciones se pone un poco mas dificil
-            else if (blankSpaces.childCount <= 8)
-            {
-                figureDelay = 3;
-            }
-
             int randomBlankSpaceIndex = Random.Range(0, blankSpaces.childCount);
 
             int randomFigureIndex = Random.Range(0, blankSpaces.childCount);
@@ -158,6 +146,7 @@ public class PuzzleGame : MonoBehaviour
             Figure tempFigure = Instantiate(figures[randomFigureIndex], initPosition, targetRotation).GetComponent<Figure>();
             tempFigure.TargetDirection = targetDirection;
             tempFigure.TargetIndex = randomFigureIndex;
+            tempFigure.TargetRotation = targetRotation * Quaternion.Euler(0, 0, 90);
         }
     }
 

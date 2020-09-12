@@ -15,6 +15,9 @@ public class Figure : MonoBehaviour
 
     //Index al que pertenece esta figura, se comprueba con el index del espacio en blanco correcto
     public int TargetIndex { get; set; }
+
+    //Rotacion inicial de la figura
+    public Quaternion TargetRotation { get; set; }
     
     #endregion
 
@@ -39,6 +42,7 @@ public class Figure : MonoBehaviour
     {
         rig.constraints = RigidbodyConstraints2D.FreezeRotation;
         rig.velocity = TargetDirection * speed;
+        transform.rotation = TargetRotation;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
