@@ -65,12 +65,12 @@ fmod.log
 fmod_editor.log
 
 # FMOD studio (In folder FMOD)
-/FMOD/**.user
-/FMOD/**.unsaved
-/FMOD/**.cache
-/FMOD/**.restore
-/FMOD/*.
-/FMOD/Build/*
+/AstrologyFMOD/**.user
+/AstrologyFMOD/**.unsaved
+/AstrologyFMOD/**.cache
+/AstrologyFMOD/**.restore
+/AstrologyFMOD/*.
+/AstrologyFMOD/Build/*
 
 
 #Ink package Zone
