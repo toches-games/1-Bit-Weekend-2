@@ -139,10 +139,12 @@ public class PuzzleGame : MonoBehaviour
 
             yield return new WaitForSeconds(reactionDelay);
 
+            //Haya la dirección y rotación que tendrá la figura inicialmente
             Vector2 targetBlankSpacePosition = targetBlankSpace.position;
             Vector2 targetDirection = (targetBlankSpacePosition - initPosition).normalized;
             Quaternion targetRotation = Quaternion.FromToRotation(Vector3.right, targetDirection);
 
+            //Instancia la figura en la escena
             Figure tempFigure = Instantiate(figures[int.Parse(blankSpaces.GetChild(currentFigureIndex).name)], initPosition, targetRotation).GetComponent<Figure>();
             tempFigure.TargetDirection = targetDirection;
             tempFigure.TargetIndex = currentFigureIndex;
