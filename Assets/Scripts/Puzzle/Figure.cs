@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Figure : MonoBehaviour
 {
     #region Public variables
@@ -11,6 +10,9 @@ public class Figure : MonoBehaviour
     [Range(0, 5)]
     public int speed = 5;
 
+    public Vector2 TargetDirection { get; set; }
+
+    public int TargetIndex { get; set; }
     #endregion
 
     #region Private variables
@@ -18,14 +20,19 @@ public class Figure : MonoBehaviour
     //Referencia al rigidbody
     Rigidbody2D rig;
 
-    //Dirección a la que se moverá
-    public Vector2 TargetDirection { get; set; }
+    //Referencia al collider
+    BoxCollider2D boxCollider;
+
+    //Referencia a el objecto padre de posiciones correctas
+    Transform correctPosition;
 
     #endregion
 
     void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        correctPosition = GameObject.Find("CorrectPosition").transform;
     }
 
     // Start is called before the first frame update
@@ -33,5 +40,23 @@ public class Figure : MonoBehaviour
     {
         rig.constraints = RigidbodyConstraints2D.FreezeRotation;
         rig.velocity = TargetDirection * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("CorrectPosition"))
+        {
+            return;
+        }
+
+        if(other.transform.GetSiblingIndex() == TargetIndex)
+        {
+            rig.velocity = Vector2.zero;
+            transform.SetParent(correctPosition);
+            transform.localPosition = other.transform.localPosition;
+            transform.localRotation = other.transform.localRotation;
+            Destroy(rig);
+            Destroy(other.gameObject);
+        }
     }
 }

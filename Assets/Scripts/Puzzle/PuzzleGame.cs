@@ -10,6 +10,9 @@ public class PuzzleGame : MonoBehaviour
     //Prefab que muestra los espacios vacios del puzzle
     public GameObject blankSpace;
 
+    //Guarda las posiciones de los espacios en blanco
+    public Transform blankSpaces;
+
     //Guarda las figuras que tendrá el puzzle para instanciarlas luego
     public GameObject[] figures;
 
@@ -17,9 +20,17 @@ public class PuzzleGame : MonoBehaviour
     [Range(0, 5)]
     public int figureDelay = 5;
 
+    //Tiempo que tarda despues de cambiar el color del espacio vacio
+    [Range(0, 5)]
+    public int reactionDelay = 2;
+
     //Radio del círculo del puzzle
     [Range(0, 10)]
     public int radius = 5;
+
+    //Velocidad de rotación del círculo
+    [Range(0, 5)]
+    public int rotationSpeed = 5;
 
     #endregion
 
@@ -48,21 +59,27 @@ public class PuzzleGame : MonoBehaviour
         StartCoroutine("CreateFigure");
     }
 
-    void OnMouseDrag()
+    void Update()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float angle = AngleBetweenTwoPoints(mousePosition, initPosition);
+        bool leftClick = Input.GetMouseButton(0);
+        bool rightClick = Input.GetMouseButton(1);
 
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        float h = Input.GetAxisRaw("Horizontal");
 
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        float angle = 360f / figures.Length;
 
-        print(angle);
-    }
+        if (leftClick || rightClick || h != 0)
+        {
+            if (leftClick || h > 0)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z - angle), rotationSpeed * Time.deltaTime);
+            }
 
-    float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
-    {
-        return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+            if(rightClick || h < 0)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + angle), rotationSpeed * Time.deltaTime);
+            }
+        }
     }
 
     //Cambia la gravedad de la scena a cero
@@ -82,8 +99,9 @@ public class PuzzleGame : MonoBehaviour
             Transform tempFigure = Instantiate(blankSpace, tempPosition, Quaternion.identity).transform;
             Quaternion targetRotation = Quaternion.FromToRotation(Vector3.right, (new Vector2(tempFigure.position.x, tempFigure.position.y) - initPosition).normalized);
 
+            tempFigure.name = i.ToString();
             tempFigure.rotation = targetRotation * Quaternion.Euler(0, 0, 90f);
-            tempFigure.SetParent(transform);
+            tempFigure.SetParent(blankSpaces);
         }
     }
 
@@ -92,13 +110,23 @@ public class PuzzleGame : MonoBehaviour
     {
         while (true)
         {
-            Vector2 targetBlankSpace = transform.GetChild(Random.Range(0, transform.childCount)).position;
-            Vector2 targetDirection = (targetBlankSpace - initPosition).normalized;
+            yield return new WaitForSeconds(figureDelay);
+
+            int randomBlankSpaceIndex = Random.Range(0, blankSpaces.childCount);
+            int randomFigureIndex = Random.Range(0, blankSpaces.childCount);
+            Transform targetBlankSpace = blankSpaces.GetChild(randomBlankSpaceIndex);
+
+            blankSpaces.GetChild(randomFigureIndex).GetComponent<SpriteRenderer>().color = Color.red;
+
+            yield return new WaitForSeconds(reactionDelay);
+
+            Vector2 targetBlankSpacePosition = targetBlankSpace.position;
+            Vector2 targetDirection = (targetBlankSpacePosition - initPosition).normalized;
             Quaternion targetRotation = Quaternion.FromToRotation(Vector3.right, targetDirection);
 
-            Figure tempFigure = Instantiate(figures[Random.Range(0, figures.Length)], initPosition, targetRotation).GetComponent<Figure>();
+            Figure tempFigure = Instantiate(figures[randomFigureIndex], initPosition, targetRotation).GetComponent<Figure>();
             tempFigure.TargetDirection = targetDirection;
-            yield return new WaitForSeconds(figureDelay);
+            tempFigure.TargetIndex = randomFigureIndex;
         }
     }
 }
