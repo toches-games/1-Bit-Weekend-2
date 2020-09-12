@@ -23,9 +23,6 @@ public class Figure : MonoBehaviour
     //Referencia al rigidbody
     Rigidbody2D rig;
 
-    //Referencia al collider
-    BoxCollider2D boxCollider;
-
     //Referencia a el objecto padre de posiciones correctas
     Transform correctPosition;
 
@@ -34,7 +31,6 @@ public class Figure : MonoBehaviour
     void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
         correctPosition = GameObject.Find("CorrectPosition").transform;
     }
 
@@ -56,11 +52,21 @@ public class Figure : MonoBehaviour
         //Si choca con el espacio en blanco siendo este la posición correcta
         if(other.transform.GetSiblingIndex() == TargetIndex)
         {
+            //Hacemos que su velocidad sea cero para dejar de moverse
             rig.velocity = Vector2.zero;
+
+            //Colocamos como padre al tablero, para que la figura se gire cuando el padre es girado
             transform.SetParent(correctPosition);
+
+            //Igualamos la posicion y rotacion local del espacio en blanco para que la figura quede
+            //como se fuece igual al espacio en blanco
             transform.localPosition = other.transform.localPosition;
             transform.localRotation = other.transform.localRotation;
+
+            //Se destruye en rigidbody de la figura
             Destroy(rig);
+
+            //Y se destruye el objeto del espacio en blanco
             Destroy(other.gameObject);
         }
     }

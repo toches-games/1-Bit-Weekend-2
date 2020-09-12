@@ -39,11 +39,18 @@ public class PuzzleGame : MonoBehaviour
     //Guarda la posición inicial del puzzle
     Vector2 initPosition;
 
+    //Referencia al capsule collider
+    CapsuleCollider2D capsuleCollider;
+
+    //Guarda el index de la figura actual
+    int currentFigureIndex;
+
     #endregion
 
     void Awake()
     {
         initPosition = transform.position;
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Start is called before the first frame update
@@ -115,11 +122,32 @@ public class PuzzleGame : MonoBehaviour
         {
             yield return new WaitForSeconds(figureDelay);
 
+            //Si no hay espacios en blanco quiere decir que completó el puzzle
+            if (blankSpaces.childCount == 0)
+            {
+                print("Puzzle completado!");
+                yield break;
+            }
+
+            //Si solo hay menos de cuatro opciones se pone mas dificil
+            else if(blankSpaces.childCount <= 4)
+            {
+                figureDelay = 2;
+            }
+
+            //Si solo hay menos de ocho opciones se pone un poco mas dificil
+            else if (blankSpaces.childCount <= 8)
+            {
+                figureDelay = 3;
+            }
+
             int randomBlankSpaceIndex = Random.Range(0, blankSpaces.childCount);
+
             int randomFigureIndex = Random.Range(0, blankSpaces.childCount);
             Transform targetBlankSpace = blankSpaces.GetChild(randomBlankSpaceIndex);
 
-            blankSpaces.GetChild(randomFigureIndex).GetComponent<SpriteRenderer>().color = Color.red;
+            currentFigureIndex = randomFigureIndex;
+            blankSpaces.GetChild(currentFigureIndex).GetComponent<SpriteRenderer>().color = Color.red;
 
             yield return new WaitForSeconds(reactionDelay);
 
@@ -131,5 +159,17 @@ public class PuzzleGame : MonoBehaviour
             tempFigure.TargetDirection = targetDirection;
             tempFigure.TargetIndex = randomFigureIndex;
         }
+    }
+
+    //Cualquier cosa que salga del tablero se destruye
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //Si lo que se sale es la figura que se colocó en una posición incorrecta
+        if (collision.CompareTag("CorrectPosition"))
+        {
+            blankSpaces.GetChild(currentFigureIndex).GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        
+        Destroy(collision.gameObject);
     }
 }
