@@ -18,24 +18,6 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &-1964353533287466883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: AstrologyFMOD/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637354654359505928
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,14 +32,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7602478623535207551}
-  - {fileID: -1964353533287466883}
+  - {fileID: 8985562513611817583}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1964353533287466883}
+  - {fileID: 8985562513611817583}
   StringsBanks:
   - {fileID: 7602478623535207551}
-  stringsBankWriteTime: 637354654359515897
+  stringsBankWriteTime: 637354920357510534
   cacheVersion: 3
 --- !u!114 &7602478623535207551
 MonoBehaviour:
@@ -73,9 +55,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: AstrologyFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637354654359515897
+  lastModified: 637354920357510534
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 688
+  Exists: 1
+--- !u!114 &8985562513611817583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: AstrologyFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637354920357490525
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
