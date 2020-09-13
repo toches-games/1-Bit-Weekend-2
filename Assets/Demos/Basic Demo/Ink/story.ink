@@ -41,21 +41,22 @@ VAR dataError = false
 
 = Pregunta_Nacimiento
 
-  {En ese caso, dime, ¿En qué fecha naciste? | Oh, tu fecha de nacimiento es erronea, por favor vuelve a intentarlo | Vaya... ¿Me estas tomando el pelo?} #fecha 
+  {Necesito que respondas a algunas preguntas antes. ¿En qué fecha naciste? | Oh, tu fecha de nacimiento es erronea, por favor vuelve a intentarlo | Vaya... ¿Me estas tomando el pelo?} #fecha 
   {     
         -dataError: ->Pregunta_Nacimiento
         -else: ->Pregunta_Ciudad
   }
 
 = Pregunta_Ciudad
-  {¿En qué ciudad naciste? | Ehm... ¿Estas seguro que existe esta ciudad? | ¡Mentirme puede traer consecuencias! }#ciudad
+  {Y ahora dime, ¿De dónde vienes? | Ehm... ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
   {     
         -dataError: ->Pregunta_Ciudad
         -else: ->Eleccion_Final
   }
 
 = Eleccion_Final
--  Elige entre dos cartas #pause 
+-  ¿Necesita saber algo más? #pause
+-  Pues si, en realidad si. Elige entre una de estas dos cartas. #pause 
    -> END
 
         
