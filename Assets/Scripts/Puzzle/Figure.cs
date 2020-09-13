@@ -56,6 +56,10 @@ public class Figure : MonoBehaviour
         //Si choca con el espacio en blanco siendo este la posición correcta
         if(other.transform.GetSiblingIndex() == TargetIndex)
         {
+            //Sound
+            ControllerSound.Instance.Item.Play();
+            ControllerSound.Instance.Item.EventInstance.setParameterByName("HoroscopeTake", 0);
+
             //Hacemos que su velocidad sea cero para dejar de moverse
             rig.velocity = Vector2.zero;
 

@@ -77,6 +77,12 @@ public class PuzzleGame : MonoBehaviour
         //Si presiona algun boton del raton o las teclas para moverse
         if (leftClick || rightClick || h != 0)
         {
+            //Sound
+            if (!ControllerSound.Instance.Wheel.IsPlaying())
+            {
+                ControllerSound.Instance.Wheel.Play();
+            }
+
             //Se gira hacia la derecha >
             if (leftClick || h > 0)
             {
@@ -88,6 +94,12 @@ public class PuzzleGame : MonoBehaviour
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + angle), rotationSpeed * Time.deltaTime);
             }
+
+        }
+        else
+        {
+            ControllerSound.Instance.Wheel.Stop();
+
         }
     }
 
@@ -159,9 +171,13 @@ public class PuzzleGame : MonoBehaviour
         //Si lo que se sale es la figura que se colocó en una posición incorrecta
         if (collision.CompareTag("CorrectPosition"))
         {
+            //SOund
+            ControllerSound.Instance.Item.Play();
+            ControllerSound.Instance.Item.EventInstance.setParameterByName("HoroscopeTake", 1);
             tempRenderer.color = new Color(tempRenderer.color.r, tempRenderer.color.g, tempRenderer.color.b, 0);
         }
         
         Destroy(collision.gameObject);
+       
     }
 }
