@@ -58,20 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# FMOD
-/Assets/FMODStudioCache.asset
-/Assets/FMODStudioCache.asset.meta
-fmod.log
-#fmod_editor.log
-
-# FMOD studio (In folder FMOD)
-/AstrologyFMOD/**.user
-/AstrologyFMOD/**.unsaved
-/AstrologyFMOD/**.cache
-/AstrologyFMOD/**.restore
-/AstrologyFMOD/*.
-/AstrologyFMOD/Build/*
-
+# FMOD files
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
+Assets/StreamingAssets/*.bank
+fmod_editor.log
 
 #Ink package Zone
 #Autosave files
