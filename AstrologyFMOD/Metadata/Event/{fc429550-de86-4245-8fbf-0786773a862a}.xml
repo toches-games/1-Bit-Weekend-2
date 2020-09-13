@@ -112,7 +112,7 @@
 			<value>0.65306122448979587</value>
 		</property>
 		<property name="volume">
-			<value>-11.5</value>
+			<value>-8</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{c1b870fb-3f97-4c81-9bda-c7fd3b650dca}</destination>

@@ -32,34 +32,40 @@
         AllMusicGame.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
-    public void PlayIntro()
+    public void PlayMenuStart()
     {
         AllMusicGame.setParameterByName("Music", 0);
+
     }
 
-    public void PlayGame()
+    public void PlayIntro()
     {
         AllMusicGame.setParameterByName("Music", 1);
     }
 
-    public void PlayWheel()
+    public void PlayGame()
     {
         AllMusicGame.setParameterByName("Music", 2);
     }
 
-    public void PlayGoodCard()
+    public void PlayWheel()
     {
         AllMusicGame.setParameterByName("Music", 3);
     }
 
-    public void PlayNormalCard()
+    public void PlayGoodCard()
     {
         AllMusicGame.setParameterByName("Music", 4);
+    }
+
+    public void PlayNormalCard()
+    {
+        AllMusicGame.setParameterByName("Music", 5);
 
     }
     public void PlayBadCard()
     {
-        AllMusicGame.setParameterByName("Music", 5);
+        AllMusicGame.setParameterByName("Music", 6);
 
     }
 }

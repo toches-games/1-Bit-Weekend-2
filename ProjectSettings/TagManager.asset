@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpaceBlank
   - CorrectPosition
+  - NarrativeObject
   layers:
   - Default
   - TransparentFX

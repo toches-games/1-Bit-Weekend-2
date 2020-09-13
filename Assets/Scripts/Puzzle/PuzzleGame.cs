@@ -136,6 +136,15 @@ public class PuzzleGame : MonoBehaviour
             //Si no hay espacios en blanco quiere decir que completó el puzzle
             if (blankSpaces.childCount == 0)
             {
+                //Para Cartas árbol/Estrella
+                //MusicController.Instance.PlayGoodCard();
+
+                //Para Cartas Espada/Luna/Corazón Roto
+                //MusicController.Instance.PlayBadCard();
+
+                //Para Carta Rued
+                //MusicController.Instance.PlayNormalCard();
+
                 print("Puzzle completado!");
                 yield break;
             }

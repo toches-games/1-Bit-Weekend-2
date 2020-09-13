@@ -87,6 +87,7 @@ public class BasicInkExample : MonoBehaviour {
                     pause = true;
 
                     //Code of input date sound
+                    ControllerSound.Instance.ritmicRain.Play();
 
                 }
                 else if(tag == "ciudad")
@@ -94,17 +95,21 @@ public class BasicInkExample : MonoBehaviour {
                     InputField input = CreateInputField(2);
                     pause = true;
                     //Code of input city sound
+                    Debug.Log("ciudad");
 
                 }
                 else if(tag == "initConversation")
                 {
                     //Code of conversation sound
+                    MusicController.Instance.PlayGame();
+                    ControllerSound.Instance.chimesDoor.Play();
 
                 }
                 else if (tag == "initPuzzle")
                 {
                     //Code of initial puzzle sound
-
+                    ControllerSound.Instance.unCover.Play();
+                    MusicController.Instance.PlayWheel();
                 }
 
                 if (pause)
@@ -124,6 +129,7 @@ public class BasicInkExample : MonoBehaviour {
 				Button button = CreateChoiceView (choice.text.Trim ());
 				// Tell the button what to do when we press it
 				button.onClick.AddListener (delegate {
+                    ControllerSound.Instance.button.Play();
 					OnClickChoiceButton (choice);
 				});
 			}

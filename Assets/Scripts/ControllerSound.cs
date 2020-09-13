@@ -42,4 +42,5 @@ public class ControllerSound : MonoBehaviour
     public StudioEventEmitter button;
     public StudioEventEmitter ritmicRain;
     public StudioEventEmitter chimesDoor;
+    public StudioEventEmitter unCover;
 }
