@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{120ca53d-9424-4a07-a359-937a7612c048}">
+		<property name="assetPath">
+			<value>WheelsRail.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.1722448979591835</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2acdb2ac-8004-405e-94f3-9d710f9441dd}</destination>
+		</relationship>
+	</object>
+</objects>
