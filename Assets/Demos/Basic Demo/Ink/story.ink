@@ -2,7 +2,8 @@ VAR dataError = false
 
 ->Introduccion
 == Introduccion ==
-- Un hombre forastero y solitario va por un parque de atracciones bastante concurrido, aunque él no se da cuenta de su alrededor. Solo hace caso al hilo de sus pensamientos: #pause
+- Un hombre forastero y solitario va por un parque de atracciones bastante concurrido... #pause
+  Él no se da cuenta de su alrededor, solo hace caso al hilo de sus pensamientos: #pause
   //Presionar un boton
   "He viajado por años buscando mi destino, he anhelado poder encontrar que me depara el futuro…"#pause
   //Presionar un boton
@@ -13,8 +14,9 @@ VAR dataError = false
   ->Conver_inicial
   //Pantalla en negro, entra conversacion
 
- = Conver_inicial
-  - ¿Qué te trae por aquí? Buen hombre
+ = Conver_inicial 
+ #initConversation
+  - ¿Qué te trae por aquí? Buen hombre 
         *[Caminaba por estos lares y vi esta carpa]
         ¿Entonces quieres escuchar tu futuro?
                 * *[Mmmh… Puede ser]
@@ -40,7 +42,6 @@ VAR dataError = false
         ->Pregunta_Nacimiento
 
 = Pregunta_Nacimiento
-
   {Necesito que respondas a algunas preguntas antes. ¿En qué fecha naciste? | Oh, tu fecha de nacimiento es erronea, por favor vuelve a intentarlo | Vaya... ¿Me estas tomando el pelo?} #fecha 
   {     
         -dataError: ->Pregunta_Nacimiento
@@ -57,6 +58,7 @@ VAR dataError = false
 = Eleccion_Final
 -  ¿Necesita saber algo más? #pause
 -  Pues si, en realidad si. Elige entre una de estas dos cartas. #pause 
+-  #initPuzzle
    -> END
 
         

@@ -27,6 +27,7 @@ public class BasicInkExample : MonoBehaviour {
     [SerializeField]
     private List<string> variablesOfDecision = new List<string>();
     private bool keyDownEvent;
+    private bool pause;
 
     void Awake () {
         next = false;
@@ -78,17 +79,41 @@ public class BasicInkExample : MonoBehaviour {
                 if(tag == "pause")
                 {
                     keyDownEvent = true;
+                    pause = true;
                 }
                 else if(tag == "fecha")
                 {
                     InputField input = CreateInputField(1);
-                }else if(tag == "ciudad")
+                    pause = true;
+
+                    //Code of input date sound
+
+                }
+                else if(tag == "ciudad")
                 {
                     InputField input = CreateInputField(2);
+                    pause = true;
+                    //Code of input city sound
+
                 }
-                yield return new WaitUntil(() => next);
-                next = false;
-                RemoveChildren();
+                else if(tag == "initConversation")
+                {
+                    //Code of conversation sound
+
+                }
+                else if (tag == "initPuzzle")
+                {
+                    //Code of initial puzzle sound
+
+                }
+
+                if (pause)
+                {
+                    next = false;
+                    pause = false;
+                    yield return new WaitUntil(() => next);
+                    RemoveChildren();
+                }
             }
 
         }
@@ -199,7 +224,8 @@ public class BasicInkExample : MonoBehaviour {
     void RemoveChildren () {
 		int childCount = canvas.transform.childCount;
 		for (int i = childCount - 1; i >= 0; --i) {
-			GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
+            if(canvas.transform.GetChild(i).CompareTag("NarrativeObject"))
+			    GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
 		}
 	}
 
