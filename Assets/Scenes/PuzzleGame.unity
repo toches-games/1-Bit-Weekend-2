@@ -186,8 +186,8 @@ MonoBehaviour:
   - {fileID: 5244121324593710076, guid: 501a85718dd575f4186945d26634b511, type: 3}
   figureDelay: 5
   reactionDelay: 2
-  radius: 5
-  rotationSpeed: 5
+  radius: 3.5
+  rotationSpeed: 4
 --- !u!58 &181136685
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5220fc56e413afa4a835e5f9bc5139af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cbeb5795a9dd3d4fbf14263e5e4093a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -340,7 +340,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &633074943
