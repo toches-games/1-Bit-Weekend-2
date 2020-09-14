@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &282405430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7196643913179343018, guid: 48cc90b79b9dabd4aa41e25688e9719a,
+    type: 3}
+  m_PrefabInstance: {fileID: 550806789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &478956239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,7 +327,7 @@ PrefabInstance:
     - target: {fileID: 7196643913179343018, guid: 48cc90b79b9dabd4aa41e25688e9719a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7196643913179343023, guid: 48cc90b79b9dabd4aa41e25688e9719a,
         type: 3}
@@ -371,7 +377,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368534959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9905f52faa14416a78e165eb5ab0ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f1d586472269614b8bd76bd54196d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!20 &1368534961
@@ -837,6 +843,8 @@ PlayableDirector:
     value: {fileID: 550806791}
   - key: {fileID: 6384446867410624656, guid: 43683808f66d5784da18586c9a1831ad, type: 2}
     value: {fileID: 478956240}
+  - key: {fileID: 7886245775007550029, guid: 43683808f66d5784da18586c9a1831ad, type: 2}
+    value: {fileID: 282405430}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &2136493133
@@ -875,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: -62}
+  m_AnchoredPosition: {x: 0, y: -62}
   m_SizeDelta: {x: 185.15894, y: 52.433655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136493135

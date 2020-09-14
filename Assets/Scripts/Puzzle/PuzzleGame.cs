@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.UI;
 
 public class PuzzleGame : MonoBehaviour
@@ -51,6 +52,7 @@ public class PuzzleGame : MonoBehaviour
 
     //Referencia al renderer de la figura actual
     SpriteRenderer tempRenderer;
+    private bool win;
 
     #endregion
 
@@ -74,6 +76,11 @@ public class PuzzleGame : MonoBehaviour
 
     void Update()
     {
+
+        if (win)
+        {
+            return;
+        }
         bool leftClick = Input.GetMouseButton(0);
         bool rightClick = Input.GetMouseButton(1);
 
@@ -143,6 +150,8 @@ public class PuzzleGame : MonoBehaviour
             //Si no hay espacios en blanco quiere decir que completó el puzzle
             if (blankSpaces.childCount == 0)
             {
+                win = true;
+                Invoke("HideTablero", 2.2f);
                 //Para Cartas árbol/Estrella
                 //MusicController.Instance.PlayGoodCard();
 
@@ -151,7 +160,7 @@ public class PuzzleGame : MonoBehaviour
 
                 //Para Carta Rued
                 //MusicController.Instance.PlayNormalCard();
-
+                GameObject.Find("TimeLineOutro").GetComponent<PlayableDirector>().Play();
                 print("Puzzle completado!");
                 yield break;
             }
@@ -179,6 +188,11 @@ public class PuzzleGame : MonoBehaviour
             tempFigure.TargetIndex = currentFigureIndex;
             tempFigure.TargetRotation = targetRotation * Quaternion.Euler(0, 0, 90);
         }
+    }
+
+    public void HideTablero()
+    {
+        GetComponentInParent<Transform>().gameObject.SetActive(false);
     }
 
     //Cualquier cosa que salga del tablero se destruye
