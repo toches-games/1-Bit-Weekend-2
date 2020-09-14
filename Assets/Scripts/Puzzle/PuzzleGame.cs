@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PuzzleGame : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class PuzzleGame : MonoBehaviour
 
     //Guarda las figuras que tendrá el puzzle para instanciarlas luego
     public GameObject[] figures;
+
+    //Guarda las imagenes de las vidas
+    public Image[] images;
+
+    //Vidas del jugador
+    int lives = 2;
 
     //Tiempo en el que saldrá cada figura
     [Range(0, 5)]
@@ -184,6 +191,19 @@ public class PuzzleGame : MonoBehaviour
             ControllerSound.Instance.Item.Play();
             ControllerSound.Instance.Item.EventInstance.setParameterByName("HoroscopeTake", 1);
             tempRenderer.color = new Color(tempRenderer.color.r, tempRenderer.color.g, tempRenderer.color.b, 0);
+
+            if(lives > 0)
+            {
+                images[lives+1].enabled = false;
+                lives--;
+            }
+
+            else
+            {
+                images[lives+1].enabled = false;
+                StopCoroutine("CreateFigure");
+                print("GameOver");
+            }
         }
         
         Destroy(collision.gameObject);

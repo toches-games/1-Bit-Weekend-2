@@ -418,7 +418,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1810568742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aaa46062ec6543699ec689cb48018a9, type: 3}
+  m_Script: {fileID: 11500000, guid: cc5830d0ff5f3c943b9bcdab8449c7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
@@ -426,7 +426,7 @@ MonoBehaviour:
   button: {fileID: 2057860304}
   ritmicRain: {fileID: 360695377}
   chimesDoor: {fileID: 1252771894}
-  unCover: {fileID: 0}
+  unCover: {fileID: 1879663256}
 --- !u!4 &1810568744
 Transform:
   m_ObjectHideFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   canvas: {fileID: 1908123726}
   textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
-  inputPrefab: {fileID: 7523965911027632005, guid: 06db785003b7c46929e6ec1109aa0a9f,
+  inputPrefab: {fileID: 7523965911027632005, guid: c2c4e37d0bd8ada48971913c66c7d883,
     type: 3}
   variablesOfDecision: []
 --- !u!4 &2009679605
