@@ -26,7 +26,7 @@ public class PuzzleGame : MonoBehaviour
 
     //Tiempo en el que saldrá cada figura
     [Range(0, 5)]
-    public int figureDelay = 5;
+    public int figureDelay = 3;
 
     //Tiempo que tarda despues de cambiar el color del espacio vacio
     [Range(0, 5)]
@@ -52,7 +52,8 @@ public class PuzzleGame : MonoBehaviour
 
     //Referencia al renderer de la figura actual
     SpriteRenderer tempRenderer;
-    private bool win;
+    private bool win = false;
+    private bool gameOver = false;
 
     #endregion
 
@@ -72,13 +73,16 @@ public class PuzzleGame : MonoBehaviour
 
         //Inicia la creación de las figuras cada cierto tiempo
         StartCoroutine("CreateFigure");
+
+        Invoke("HideBlackTransition", 2.5f);
     }
 
     void Update()
     {
 
-        if (win)
+        if (win || gameOver)
         {
+            StopCoroutine(CreateFigure());
             return;
         }
         bool leftClick = Input.GetMouseButton(0);
@@ -197,6 +201,11 @@ public class PuzzleGame : MonoBehaviour
         }
     }
 
+    public void HideBlackTransition()
+    {
+        GameObject.Find("BlackTransition").SetActive(false);
+    }
+
     public void HideTablero()
     {
         GetComponentInParent<Transform>().gameObject.SetActive(false);
@@ -224,7 +233,9 @@ public class PuzzleGame : MonoBehaviour
             {
                 images[lives+1].enabled = false;
                 StopCoroutine("CreateFigure");
-                print("GameOver");
+                GameObject.Find("TimeLineINGameOver").GetComponent<PlayableDirector>().Play();
+                gameOver = true;
+
             }
         }
         

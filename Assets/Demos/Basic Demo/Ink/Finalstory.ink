@@ -14,27 +14,27 @@ VAR finalSix = false
 {
 -finalOne:
    VIDENTE
-    Ha salido el Corazón Roto
+    Ha salido el Corazon Roto
     representa la Muerte, carta que inspira 
     miedo  #pause
    VIDENTE
-    pero erróneamente porque por el 
+    pero erroneamente porque por el 
     contrario es la vida
-    en su sentido más puro #pause
+    en su sentido mas puro #pause
     VIDENTE
-    Se cree, de hecho, la renovación total
-    al final de cualquier capítulo de la vida #pause
+    Se cree, de hecho, la renovacion total
+    al final de cualquier capitulo de la vida #pause
    FORASTERO
     ¿Y eso es malo o es bueno? 
     No quiero morir!!! #pause
    VIDENTE
-    No he dicho que vaya a morir alguien aquí 
+    No he dicho que vaya a morir alguien aqui
     solo dice que algo en tu vida va cambiar 
-    un giro de 180º en sentido contrario #pause
+    un giro de 180 en sentido contrario #pause
     VIDENTE
     algo imprevisto, de una faceta de tu vida 
     que hasta ahora has descuidado mucho
-    ¿Estás preparado para ese reto?#pause
+    ¿Estas preparado para ese reto?#pause
 
 -finalTwo:
    VIDENTE
@@ -42,17 +42,17 @@ VAR finalSix = false
     significa el Viaje por excelencia #pause
     VIDENTE
     Viaje de la independencia
-    de la conquista y de la expansión 
+    de la conquista y de la expansion 
     fin matrimonial #pause
     VIDENTE
     los viajes inseguros y peligrosos 
-    el pánico, la confusión e incluso la ruina. #pause
+    el panico, la confuson e incluso la ruina. #pause
    FORASTERO
     Pero si eso exactamente es lo que hago
     viajar #pause
     FORASTERO
-    ¿Qué me está diciendo que voy a estar
-    así para siempre?#pause
+    ¿Que me esta diciendo que voy a estar
+    asi para siempre?#pause
     FORASTERO
     No lo entiendo. #pause
    VIDENTE
@@ -62,14 +62,14 @@ VAR finalSix = false
     para una persona que vive en una ciudad 
     puede significar que le viene una mudanza #pause
     VIDENTE
-    Pero para alguien nómada como tu 
-    puede significar que el próximo viaje 
-    puede ser el último #pause
+    Pero para alguien nomada como tu 
+    puede significar que el proximo viaje 
+    puede ser el ultimo #pause
     VIDENTE
-    ya sea porque algo te detendrá 
+    ya sea porque algo te detendra 
     o por la propia muerte #pause
     VIDENTE
-    Pero me atrevería a decir que se deberá 
+    Pero me atreveria a decir que se debera 
     a una persona, un niño. #pause
    FORASTERO
     Mi hermano pequeño!!! #pause
@@ -78,13 +78,13 @@ VAR finalSix = false
    VIDENTE
     Vaya vaya vaya… La Estrella #pause
    FORASTERO
-    ¿Qué pasa? eso es malo? #pause
+    ¿Que pasa? eso es malo? #pause
    VIDENTE
-  ¿Por qué todos preguntan si las cartas 
+  ¿Por que todos preguntan si las cartas 
   son malas y no, si son buenas? #pause
   VIDENTE
   La Estrella significa Prospectos Brillantes
-  éxito y ayuda amistosa, prosperidad y 
+  exito y ayuda amistosa, prosperidad y 
   revelaciones #pause 
   VIDENTE
   una fortuna pasiva y generosa 
@@ -92,14 +92,14 @@ VAR finalSix = false
   VIDENTE
   Puede ser que te suceda una de ellas
   o quiza todas, pero algo es seguro
-  un nuevo camino se abrirá ante tí #pause
+  un nuevo camino se abrira ante ti #pause
   VIDENTE
-  la estrella te guiará por él 
-  pero serás tú quien lo elija #pause
+  la estrella te guiara por el 
+  pero seras tu quien lo elija #pause
   VIDENTE
   El camino de la generosidad 
   donde tus bienes son cambiados por amor
-  cercanía y amistad #pause
+  cercania y amistad #pause
   VIDENTE
   O la avaricia, repleta 
   de bienes y prosperidad material #pause
@@ -108,16 +108,16 @@ VAR finalSix = false
 
 -finalFour:
    VIDENTE
-    En fin, lo que temía, la Espada. #pause
+    En fin, lo que temia, la Espada. #pause
    FORASTERO
-    ¿Qué pasa con eso, debería comprarme una? #pause
+    ¿Que pasa con eso, deberia comprarme una? #pause
    VIDENTE
     Significa el precio a pagar, la renuncia
     el arrepentimiento, el extasis 
     y el castigo forzado #pause
     VIDENTE
     el egocentrismo y las ilusiones
-    hábitos nefastos sazonados por la 
+    habitos nefastos sazonados por la 
     angustia y el miedo #pause
     VIDENTE
     Ya deberias saber que pasa con eso
@@ -129,7 +129,7 @@ VAR finalSix = false
     Significa que huyes de algo 
     y que vas a arrepentirte #pause
     VIDENTE
-    O que te estás forzando a huir 
+    O que te estas forzando a huir 
     como castigo 
     por algo que crees que es culpa tuya. #pause
 
@@ -138,50 +138,50 @@ VAR finalSix = false
     Mmm… interesante sin duda 
     te ha salido La Luna. #pause
    FORASTERO
-    ¿Interesante porqué? #pause
+    ¿Interesante porque? #pause
    VIDENTE
     Porque significa peligros escondidos
-    ocultos, imaginación fantástica #pause
+    ocultos, imaginacion fantastica #pause
     VIDENTE
     error y mala influencia externa, 
     mentiras, indolencia, secretos 
-    y personas lunáticas. #pause
+    y personas lunaticas. #pause
     VIDENTE
     Eso significa que tus decisiones 
     te llevan por caminos que no debieran #pause
     VIDENTE
-    Y no para bien, por eso estás buscando 
+    Y no para bien, por eso estas buscando 
     un nuevo significado a tu futuro 
-    porque quieres huir de él. #pause
+    porque quieres huir de el. #pause
     VIDENTE
     Pero no vas a huir porque tus decisiones 
-    te llevan directo de nuevo a él, 
+    te llevan directo de nuevo a el, 
     a tus errores, a tu pesar, a tu condena. #pause
     VIDENTE
     ¿Un consejo? 
-    No huyas más, afrontalo y dejarás 
-    de huir de ello, serás libre. #pause
+    No huyas mas, afrontalo y dejaras 
+    de huir de ello, seras libre. #pause
 
 -finalSix: 
    VIDENTE
-    Mi más sincera enhorabuena 
-    El Árbol #pause
+    Mi mas sincera enhorabuena 
+    El Arbol #pause
     VIDENTE
     Significado positivo de triunfo 
-    y recompensa, realización total #pause
+    y recompensa, realizacion total #pause
     VIDENTE
-    seguridad y logro de las más altas 
-    aspiraciones, éxito duradero #pause
+    seguridad y logro de las mas altas 
+    aspiraciones, exito duradero #pause
     VIDENTE
     Recompensa por las labores, 
     crecimiento y fortaleza. #pause
     VIDENTE
     Sin duda la mejor de las cartas 
-    sin mala interpretación posible. #pause
+    sin mala interpretacion posible. #pause
     VIDENTE
     Vienes buscando algo y lo vas a 
     encontrar, tu camino llega a su fin 
-    podrás descansar y sentirte libre. #pause
+    podras descansar y sentirte libre. #pause
 
 -else: ->END
 }
