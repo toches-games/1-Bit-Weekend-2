@@ -141,6 +141,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-8363732022916637083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wheels/Wheesel
+  m_EditorClassIdentifier: 
+  Name: Wheesel
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-8266623205856240162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +424,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7086252621726758715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: AstrologyFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637354920357490525
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7050975557946344104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +515,7 @@ MonoBehaviour:
   guid: c1fc4eb2d2b82c46af619e6f9317a850
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -750,6 +785,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4917612220733936808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: AstrologyFMOD/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637356179050414531
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4896544222645035038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +836,7 @@ MonoBehaviour:
   guid: 30d54d3486492e4f91d9aa8b3a1da3ea
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1182,6 +1235,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1984104177420618408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Music
+  m_EditorClassIdentifier: 
+  Name: Music
+  Min: 0
+  Max: 7
+  Default: 0
+  Exists: 1
 --- !u!114 &-1908719712494599054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,12 +1502,12 @@ MonoBehaviour:
   guid: 509542fc86de45428fbf0786773a862a
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4896544222645035038}
+  - {fileID: -8363732022916637083}
   MinDistance: 0
   MaxDistance: 0
   Length: 653
@@ -1606,12 +1676,12 @@ MonoBehaviour:
   guid: 939863591d61a8408b476b70b5a16c08
   Banks:
   - {fileID: -7103001950315311979}
-  - {fileID: -8911536355933393781}
+  - {fileID: -4917612220733936808}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7552726668890045452}
+  - {fileID: -1984104177420618408}
   MinDistance: 0
   MaxDistance: 0
   Length: 380271
@@ -1646,9 +1716,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7602478623535207551}
-  - {fileID: -2630287085641473643}
-  - {fileID: -8911536355933393781}
-  - {fileID: 6319627457362661500}
+  - {fileID: -7086252621726758715}
+  - {fileID: -4917612220733936808}
+  - {fileID: 4717336755277101064}
   EditorEvents:
   - {fileID: -140408907303401213}
   - {fileID: 1537970143692555095}
@@ -1660,10 +1730,10 @@ MonoBehaviour:
   - {fileID: 7953743137588178251}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2630287085641473643}
+  - {fileID: -7086252621726758715}
   StringsBanks:
   - {fileID: 7602478623535207551}
-  stringsBankWriteTime: 637356249990302168
+  stringsBankWriteTime: 637356138334892602
   cacheVersion: 3
 --- !u!114 &51906596568363223
 MonoBehaviour:
@@ -1975,7 +2045,7 @@ MonoBehaviour:
   guid: 20adaa7573b1eb439554d44fe35ad8f1
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2091,12 +2161,12 @@ MonoBehaviour:
   guid: dc2fc83c8f9a7545aa1f29854b765e0a
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7501128185723960787}
+  - {fileID: 5717522504250252825}
   MinDistance: 0
   MaxDistance: 0
   Length: 3761
@@ -2502,7 +2572,7 @@ MonoBehaviour:
   guid: bf3396935d2c474e9f045e4aa788a666
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2544,6 +2614,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &4717336755277101064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: AstrologyFMOD/Build/Desktop/Sounds.bank
+  SubDir: 
+  lastModified: 637356179050524405
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4908205949428838413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2853,6 +2941,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &5717522504250252825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Items/HoroscopeTake
+  m_EditorClassIdentifier: 
+  Name: HoroscopeTake
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &5733304390155386178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3096,7 +3201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: AstrologyFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637356249990302168
+  lastModified: 637356138334892602
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -3175,7 +3280,7 @@ MonoBehaviour:
   guid: fb0a9e6d6c6ae745ad50558549e5a2d6
   Banks:
   - {fileID: 8888033964754882414}
-  - {fileID: 6319627457362661500}
+  - {fileID: 4717336755277101064}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
