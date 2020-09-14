@@ -26,11 +26,11 @@ public class PuzzleGame : MonoBehaviour
 
     //Tiempo en el que saldrá cada figura
     [Range(0, 5)]
-    public int figureDelay = 3;
+    public int figureDelay = 2;
 
     //Tiempo que tarda despues de cambiar el color del espacio vacio
     [Range(0, 5)]
-    public int reactionDelay = 2;
+    public int reactionDelay = 1;
 
     //Radio del círculo del puzzle
     [Range(0, 10)]
@@ -156,7 +156,7 @@ public class PuzzleGame : MonoBehaviour
             {
                 string finalNumber = FinalNarrative.finalNumber;
                 win = true;
-                Invoke("HideTablero", 2.2f);
+                //Invoke("HideTablero", 2.2f);
                 //Para Cartas árbol/Estrella
                 if(finalNumber == "finalThree" || finalNumber == "finalSix")
                 {
