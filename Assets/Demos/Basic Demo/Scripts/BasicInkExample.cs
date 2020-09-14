@@ -30,6 +30,8 @@ public class BasicInkExample : MonoBehaviour {
     private bool keyDownEvent;
     private bool pause;
 
+    public GameObject cards;
+
     void Start () {
         next = false;
 		//Remove the default message
@@ -104,19 +106,12 @@ public class BasicInkExample : MonoBehaviour {
                     //Code of conversation sound
                     MusicController.Instance.PlayGame();
                     ControllerSound.Instance.chimesDoor.Play();
-                    GameObject.Find("Vidente").SetActive(true);
+                    GameObject.Find("Vidente").GetComponent<Image>().enabled = true;
                 }
                 else if (tag == "initPuzzle")
                 {
-                    //ESTE SONIDO ES EL DE SELECCIONAR LA CARTA LO PUEDES REPRODUCIR CUANDO ESTO SUCEDA
-                    ControllerSound.Instance.unCover.Play();
-                    
-
                     //AQUI YEI CI
-
-
-                    GameObject.Find("TimeLineOut").GetComponent<PlayableDirector>().Play();
-                    Invoke("MusicController.Instance.PlayWheel",1.8f);
+                    cards.SetActive(true);
                 }
 
                 if (pause)
@@ -241,5 +236,94 @@ public class BasicInkExample : MonoBehaviour {
 			    GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
 		}
 	}
+
+    public void ClickCard(string side)
+    {
+        if(cards.transform.GetChild(0).gameObject.activeSelf || cards.transform.GetChild(2).gameObject.activeSelf)
+        {
+            return;
+        }
+
+        variablesOfDecision.Add(side);
+
+        if(side == "Izquierda")
+        {
+            cards.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        else
+        {
+            cards.transform.GetChild(2).gameObject.SetActive(true);
+        }
+
+        //ESTE SONIDO ES EL DE SELECCIONAR LA CARTA LO PUEDES REPRODUCIR CUANDO ESTO SUCEDA
+        ControllerSound.Instance.unCover.Play();
+
+        CheckCards();
+
+        GameObject.Find("TimeLineOut").GetComponent<PlayableDirector>().Play();
+        Invoke("MusicController.Instance.PlayWheel", 1.8f);
+    }
+
+    void CheckCards()
+    {
+        if ((int)variablesOfDecision[0][3] % 2 == 0)
+        {
+            if(variablesOfDecision[1][variablesOfDecision[1].Length -1] == 'a' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'e' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'i' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'o' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'u')
+            {
+                if(variablesOfDecision[2] == "Derecha")
+                {
+                    FinalNarrative.finalNumber = 1;
+                }
+
+                else
+                {
+                    FinalNarrative.finalNumber = 2;
+                }
+            }
+
+            else
+            {
+                if (variablesOfDecision[2] == "Derecha")
+                {
+                    FinalNarrative.finalNumber = 3;
+                }
+
+                else
+                {
+                    FinalNarrative.finalNumber = 4;
+                }
+            }
+        }
+
+        else
+        {
+            if (variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'a' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'e' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'i' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'o' || variablesOfDecision[1][variablesOfDecision[1].Length - 1] == 'u')
+            {
+                if (variablesOfDecision[2] == "Derecha")
+                {
+                    FinalNarrative.finalNumber = 5;
+                }
+
+                else
+                {
+                    FinalNarrative.finalNumber = 6;
+                }
+            }
+
+            else
+            {
+                if (variablesOfDecision[2] == "Derecha")
+                {
+                    FinalNarrative.finalNumber = 3;
+                }
+
+                else
+                {
+                    FinalNarrative.finalNumber = 6;
+                }
+            }
+        }
+    }
 
 }
