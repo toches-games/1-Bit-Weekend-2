@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 7196643913179343017, guid: 48cc90b79b9dabd4aa41e25688e9719a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7196643913179343017, guid: 48cc90b79b9dabd4aa41e25688e9719a,
         type: 3}
@@ -410,7 +410,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095023934}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1026,8 +1026,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1815824206}
-  - {fileID: 89424316}
   - {fileID: 233138557}
+  - {fileID: 89424316}
   - {fileID: 527038070}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1640,7 +1640,7 @@ MonoBehaviour:
     m_Top: 20
     m_Bottom: 20
   m_ChildAlignment: 7
-  m_Spacing: 10
+  m_Spacing: -5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

@@ -150,18 +150,25 @@ public class PuzzleGame : MonoBehaviour
             //Si no hay espacios en blanco quiere decir que completó el puzzle
             if (blankSpaces.childCount == 0)
             {
+                string finalNumber = FinalNarrative.finalNumber;
                 win = true;
                 Invoke("HideTablero", 2.2f);
                 //Para Cartas árbol/Estrella
-                //MusicController.Instance.PlayGoodCard();
+                if(finalNumber == "finalThree" || finalNumber == "finalSix")
+                {
+                    MusicController.Instance.PlayGoodCard();
+                }else if (finalNumber == "finalOne" || finalNumber == "finalFive" || 
+                            finalNumber == "finalFour")
+                {
+                    //Para Cartas Espada/Luna/Corazón Roto
+                    MusicController.Instance.PlayBadCard();
+                }else if (finalNumber == "finalTwo")
+                {
+                    //Para Carta Rueda
+                    MusicController.Instance.PlayNormalCard();
+                }
 
-                //Para Cartas Espada/Luna/Corazón Roto
-                //MusicController.Instance.PlayBadCard();
-
-                //Para Carta Rued
-                //MusicController.Instance.PlayNormalCard();
                 GameObject.Find("TimeLineOutro").GetComponent<PlayableDirector>().Play();
-                print("Puzzle completado!");
                 yield break;
             }
 

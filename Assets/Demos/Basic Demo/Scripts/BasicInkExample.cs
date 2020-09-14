@@ -136,6 +136,7 @@ public class BasicInkExample : MonoBehaviour {
 				});
 			}
 		}
+        /**
 		// If we've read all the content and there's no choices, the story is finished!
 		else if(!story.canContinue) {
 			Button choice = CreateChoiceView("End of story.\nRestart?");
@@ -143,6 +144,7 @@ public class BasicInkExample : MonoBehaviour {
 				StartStory();
 			});
 		}
+        **/
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
@@ -255,14 +257,19 @@ public class BasicInkExample : MonoBehaviour {
         {
             cards.transform.GetChild(2).gameObject.SetActive(true);
         }
-
-        //ESTE SONIDO ES EL DE SELECCIONAR LA CARTA LO PUEDES REPRODUCIR CUANDO ESTO SUCEDA
+        
         ControllerSound.Instance.unCover.Play();
 
         CheckCards();
 
         GameObject.Find("TimeLineOut").GetComponent<PlayableDirector>().Play();
         Invoke("MusicController.Instance.PlayWheel", 1.8f);
+        Invoke("HideCards", 0.8f);
+    }
+
+    public void HideCards()
+    {
+        cards.SetActive(false);
     }
 
     void CheckCards()

@@ -16,8 +16,7 @@ VAR dataError = false
 
  = Conver_inicial 
  #initConversation
-  - VIDENTE
-  ¿Qué te trae por aquí? Buen hombre 
+  - ¿Qué te trae por aquí? Buen hombre 
         *[Caminaba por estos lares y vi esta carpa]
         ¿Entonces quieres escuchar tu futuro?
                 * *[Mmmh… Puede ser]
@@ -31,34 +30,46 @@ VAR dataError = false
  = Conver_final
   
         *[Le tengo miedo al futuro.]
-        Siendo sincero, ¿saber tu futuro te ayudaría realmente?
-        ¡Claro que sí!
+        VIDENTE
+        Siendo sincero, ¿saber tu futuro te ayudaría realmente? #pause
+        FORASTERO
+        ¡Claro que sí!#pause
 
         *[Toda mi vida he pensado que me espera algo grande]
         
-        -¿Y si te espera algo horrible? #pause
+        -VIDENTE
+        ¿Y si te espera algo horrible? #pause
+        FORASTERO
         Trataría de cambiarlo. #pause
+        VIDENTE
         Muchacho, ¿El futuro realmente puede cambiarse? #pause
+        FORASTERO
         Vamos a probarlo #pause
+        VIDENTE
+        Mmmh… Necesito que respondas algunas preguntas #pause
         ->Pregunta_Nacimiento
 
 = Pregunta_Nacimiento
-  {Necesito que respondas a algunas preguntas antes. ¿En qué fecha naciste? | Oh, tu fecha de nacimiento es erronea, por favor vuelve a intentarlo | Vaya... ¿Me estas tomando el pelo?} #fecha 
+  VIDENTE
+  {¿En qué fecha naciste? | Oh, ¿de verdad naciste en ese año? | Vaya... ¿Me estas tomando el pelo?} #fecha 
   {     
         -dataError: ->Pregunta_Nacimiento
         -else: ->Pregunta_Ciudad
   }
 
 = Pregunta_Ciudad
-  {Y ahora dime, ¿De dónde vienes? | Ehm... ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
+  VIDENTE
+  {Y ahora dime, ¿De dónde vienes? | ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
   {     
         -dataError: ->Pregunta_Ciudad
         -else: ->Eleccion_Final
   }
 
 = Eleccion_Final
--  ¿Necesita saber algo más? #pause
--  Pues si, en realidad si. Elige entre una de estas dos cartas. #pause 
+    FORASTERO
+-  ¿Algo más? #pause
+  VIDENTE
+-  A ver muchacho, elige entre una de estas dos cartas. #pause 
 -  #initPuzzle
    -> END
 
