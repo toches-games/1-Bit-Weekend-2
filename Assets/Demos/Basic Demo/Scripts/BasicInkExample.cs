@@ -4,6 +4,7 @@ using System;
 using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Playables;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class BasicInkExample : MonoBehaviour {
@@ -29,11 +30,11 @@ public class BasicInkExample : MonoBehaviour {
     private bool keyDownEvent;
     private bool pause;
 
-    void Awake () {
+    void Start () {
         next = false;
 		//Remove the default message
 		RemoveChildren();
-		StartStory();
+        Invoke("StartStory", 2.3f);
 	}
 
     private void Update()
@@ -103,13 +104,19 @@ public class BasicInkExample : MonoBehaviour {
                     //Code of conversation sound
                     MusicController.Instance.PlayGame();
                     ControllerSound.Instance.chimesDoor.Play();
-
+                    GameObject.Find("Vidente").SetActive(true);
                 }
                 else if (tag == "initPuzzle")
                 {
-                    //Code of initial puzzle sound
+                    //ESTE SONIDO ES EL DE SELECCIONAR LA CARTA LO PUEDES REPRODUCIR CUANDO ESTO SUCEDA
                     ControllerSound.Instance.unCover.Play();
-                    MusicController.Instance.PlayWheel();
+                    
+
+                    //AQUI YEI CI
+
+
+                    GameObject.Find("TimeLineOut").GetComponent<PlayableDirector>().Play();
+                    Invoke("MusicController.Instance.PlayWheel",1.8f);
                 }
 
                 if (pause)
