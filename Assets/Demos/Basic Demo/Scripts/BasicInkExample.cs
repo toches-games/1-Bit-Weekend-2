@@ -264,6 +264,7 @@ public class BasicInkExample : MonoBehaviour {
         }
         
         ControllerSound.Instance.unCover.Play();
+        MusicController.Instance.PlayWheel();
 
         CheckCards();
 
