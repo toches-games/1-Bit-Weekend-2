@@ -11,7 +11,7 @@ public class FinalNarrative : MonoBehaviour
 {
     public static event Action<Story> OnCreateStory;
 
-    public static string finalNumber;
+    public static string finalNumber = "finalOne";
 
     [SerializeField]
     private TextAsset inkJSONAsset = null;
@@ -26,6 +26,8 @@ public class FinalNarrative : MonoBehaviour
     private bool next;
     private bool keyDownEvent;
     private bool pause;
+    public GameObject skipText;
+
 
     void Start()
     {
@@ -43,6 +45,8 @@ public class FinalNarrative : MonoBehaviour
         {
             next = true;
             keyDownEvent = false;
+            skipText.SetActive(false);
+
         }
     }
 
@@ -83,6 +87,8 @@ public class FinalNarrative : MonoBehaviour
                 {
                     keyDownEvent = true;
                     pause = true;
+                    skipText.SetActive(true);
+
                 }
 
                 if (pause)

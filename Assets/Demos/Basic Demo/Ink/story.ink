@@ -5,12 +5,18 @@ VAR dataError = false
 - Un hombre forastero y solitario va por un parque de atracciones bastante concurrido... #pause
   El no se da cuenta de su alrededor, solo hace caso al hilo de sus pensamientos: #pause
   //Presionar un boton
-  "He viajado por años buscando mi destino, he anhelado poder encontrar que me depara el futuro…"#pause
+  FORASTERO
+  "He viajado por años buscando mi destino" #pause
+  FORASTERO
+  "he anhelado poder encontrar que me depara el futuro…"#pause
   //Presionar un boton
   De pronto y como salida de un espejismo vio una carpa de un vidente. #pause
   //Presionar boton
-  "¿Ese dia podria ser hoy? Probare suerte." #pause
-  Y entra sin pensarlo.#pause
+  FORASTERO
+  "¿Ese dia podria ser hoy?" #pause
+  FORASTERO
+  Probare suerte #pause
+  Y entra sin pensarlo#pause
   ->Conver_inicial
   //Pantalla en negro, entra conversacion
 

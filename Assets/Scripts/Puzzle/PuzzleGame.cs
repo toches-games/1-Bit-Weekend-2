@@ -152,7 +152,7 @@ public class PuzzleGame : MonoBehaviour
             yield return new WaitForSeconds(figureDelay);
 
             //Si no hay espacios en blanco quiere decir que completó el puzzle
-            if (blankSpaces.childCount == 0)
+            if (blankSpaces.childCount == 11)
             {
                 string finalNumber = FinalNarrative.finalNumber;
                 win = true;

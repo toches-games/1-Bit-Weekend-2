@@ -29,6 +29,7 @@ public class BasicInkExample : MonoBehaviour {
     private List<string> variablesOfDecision = new List<string>();
     private bool keyDownEvent;
     private bool pause;
+    public GameObject skipText;
 
     public GameObject cards;
 
@@ -46,6 +47,8 @@ public class BasicInkExample : MonoBehaviour {
         {
             next = true;
             keyDownEvent = false;
+            skipText.SetActive(false);
+
         }
     }
 
@@ -83,6 +86,8 @@ public class BasicInkExample : MonoBehaviour {
                 {
                     keyDownEvent = true;
                     pause = true;
+                    skipText.SetActive(true);
+                    
                 }
                 else if(tag == "fecha")
                 {
