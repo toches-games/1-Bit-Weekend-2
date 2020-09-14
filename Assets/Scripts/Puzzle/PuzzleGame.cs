@@ -198,6 +198,7 @@ public class PuzzleGame : MonoBehaviour
                 lives--;
             }
 
+            //El jugador pierde el puzzle
             else
             {
                 images[lives+1].enabled = false;

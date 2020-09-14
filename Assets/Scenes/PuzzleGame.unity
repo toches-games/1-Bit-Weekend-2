@@ -222,14 +222,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d165b2a2a96df4fa5e71ee7c80cd8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blankSpace: {fileID: 0}
+  blankSpace: {fileID: 7624158397833879331, guid: 7322e434035dcfe41872a6ea894e4864,
+    type: 3}
   blankSpaces: {fileID: 2078655349}
-  figures: []
-  images: []
-  figureDelay: 5
+  figures:
+  - {fileID: 5244121324593710076, guid: d789120af8508b1469836c1e51042b11, type: 3}
+  - {fileID: 5244121324593710076, guid: 5c6a48fd13ef5db4980717081312346a, type: 3}
+  - {fileID: 5244121324593710076, guid: 2200649f7350d3249aae2646153ec927, type: 3}
+  - {fileID: 5244121324593710076, guid: e1af5a47f97f1134b935e016b2317507, type: 3}
+  - {fileID: 5244121324593710076, guid: 127ad86259d0fff4e953212eb4430009, type: 3}
+  - {fileID: 5244121324593710076, guid: 905259b9294cc0344acaca87f547b30d, type: 3}
+  - {fileID: 5244121324593710076, guid: cacce11f61c4d4a4ab9561d055c52824, type: 3}
+  - {fileID: 5244121324593710076, guid: 69a50d9687d173c468a249366cf0dd81, type: 3}
+  - {fileID: 5244121324593710076, guid: e39b15b1b0e67ca4e8a030f662588b82, type: 3}
+  - {fileID: 5244121324593710076, guid: 333b91cb119bd784fb1339df3457ae71, type: 3}
+  - {fileID: 5244121324593710076, guid: e2e66578ce506694d894c985fac712e4, type: 3}
+  - {fileID: 5244121324593710076, guid: 74577536e3b277c4397f0c00906824ac, type: 3}
+  images:
+  - {fileID: 1771317324}
+  - {fileID: 414447591}
+  - {fileID: 1512751419}
+  - {fileID: 1704121965}
+  figureDelay: 4
   reactionDelay: 2
-  radius: 5
-  rotationSpeed: 5
+  radius: 3.5
+  rotationSpeed: 4
 --- !u!58 &181136685
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1320,7 +1337,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085666800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc5830d0ff5f3c943b9bcdab8449c7fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 503a0e90c6654e84eb02b8cc369e097f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 853272642}
