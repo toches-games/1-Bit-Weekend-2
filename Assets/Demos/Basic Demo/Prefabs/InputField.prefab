@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Escribe aqui
+  m_Text: write here
 --- !u!114 &2936537171577278894
 MonoBehaviour:
   m_ObjectHideFlags: 0

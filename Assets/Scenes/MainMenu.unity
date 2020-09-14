@@ -831,10 +831,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- Presiona 'N' para saltar el texto\n- Click izquierdo mueves la rueda
-    en sentido \nantihorario\n- Click derecho mueves la rueda en sentido horario\n-
-    \xA1Debes poner cada carta en su lugar!\n- El sol te indica donde va la siguiente
-    carta"
+  m_Text: "-Press 'N' to skip the text\r\n-Left click to turn the wheel counterclockwise\r\n-Right
+    click to turn the wheel clockwise\r\n-You must enter the cards to their position!
+    \n-The sun tells you where to place it."
 --- !u!222 &1065528234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -912,7 +911,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INSTRUCCIONES
+  m_Text: INSTRUCTIONS
 --- !u!222 &1302029324
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1360,7 +1359,7 @@ PrefabInstance:
     - target: {fileID: 9110498717359665193, guid: f919bec4d7cde544c95faa41c4a598e1,
         type: 3}
       propertyPath: m_Text
-      value: JUGAR
+      value: PLAY
       objectReference: {fileID: 0}
     - target: {fileID: 9110498717359665193, guid: f919bec4d7cde544c95faa41c4a598e1,
         type: 3}

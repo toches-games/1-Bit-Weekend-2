@@ -2,80 +2,79 @@ VAR dataError = false
 
 ->Introduccion
 == Introduccion ==
-- Un hombre forastero y solitario va por un parque de atracciones bastante concurrido... #pause
-  El no se da cuenta de su alrededor, solo hace caso al hilo de sus pensamientos: #pause
+- A lonely stranger goes through a fairly crowded amusement park ... #pause
+  He is unaware of his surroundings, he only listens to the train of his thoughts: #pause
   //Presionar un boton
-  FORASTERO
-  "He viajado por años buscando mi destino" #pause
-  FORASTERO
-  "he anhelado poder encontrar que me depara el futuro…"#pause
-  //Presionar un boton
-  De pronto y como salida de un espejismo vio una carpa de un vidente. #pause
-  //Presionar boton
-  FORASTERO
-  "¿Ese dia podria ser hoy?" #pause
-  FORASTERO
-  Probare suerte #pause
-  Y entra sin pensarlo#pause
+  STRANGER
+  "I have traveled for years looking for my destiny" #pause
+  STRANGER
+  "I have longed to find what the future holds ..." #pause
+   //Pressing a button
+   Suddenly and out of a mirage he saw a tent of a seer. #pause
+   //Press button
+   STRANGER
+   "Could that day be today?" #pause
+   STRANGER
+   I'll try luck #pause
+   And enter without thinking # pause
   ->Conver_inicial
   //Pantalla en negro, entra conversacion
 
  = Conver_inicial 
  #initConversation
-  - ¿Que te trae por aqui? Buen hombre 
-        *[Caminaba por estos lares y vi esta carpa]
-        ¿Entonces quieres escuchar tu futuro?
-                * *[Mmmh… Puede ser]
-                ¿Por que tan dudoso? ->Conver_final
-                * *[¡Por supuesto que si!] -> Quiero_Saberlo
+  - What brings you here? Good man
+         * [I was walking around these parts and I saw this tent]
+         So you want to hear your future?
+                 * * [Mmmh… It could be]
+                 Why so dubious? -> Conver_final
+                 * * [Of course I do!] -> Quiero_Saberlo
                         
-        *(Quiero_Saberlo) [Quiero saber mi futuro]
-        Oh vaya… Se te escucha muy decidido. #pause
-        ¿Por que tanto deseo en saberlo? ->Conver_final 
-
+         * (Quiero_Saberlo) [I want to know my future]
+         Oh wow ... You sound very determined. #pause
+         Why do I want to know so much? -> Conver_final
  = Conver_final
   
-        *[Le tengo miedo al futuro.]
-        VIDENTE
-        Siendo sincero, ¿saber tu futuro te ayudaria realmente? #pause
-        FORASTERO
-        ¡Claro que si!#pause
+      * [I'm afraid of the future.]
+         SEER
+         To be honest, would knowing your future really help you? #pause
+         STRANGER
+         Sure you do! #pause
 
-        *[Toda mi vida he pensado que me espera algo grande]
+         * [All my life I have thought that something great awaits me]
         
-        -VIDENTE
-        ¿Y si te espera algo horrible? #pause
-        FORASTERO
-        Trataria de cambiarlo. #pause
-        VIDENTE
-        Muchacho, ¿El futuro realmente puede cambiarse? #pause
-        FORASTERO
-        Vamos a probarlo #pause
-        VIDENTE
-        Mmmh… Necesito que respondas algunas preguntas #pause
-        ->Pregunta_Nacimiento
+         -SEER
+         What if something horrible awaits you? #pause
+         STRANGER
+         I would try to change it. #pause
+         SEER
+         Boy, can the future really be changed? #pause
+         STRANGER
+         Let's try it #pause
+         SEER
+         Mmmh… I need you to answer some questions #pause
+         -> Pregunta_Nacimiento
 
 = Pregunta_Nacimiento
-  VIDENTE
-  {¿En que fecha naciste? | Oh, ¿de verdad naciste en ese año? | Vaya... ¿Me estas tomando el pelo?} #fecha 
+  SEER
+   {When were you born? | Oh, were you really born in that year? | Wow ... Are you kidding me?} #fecha 
   {     
         -dataError: ->Pregunta_Nacimiento
         -else: ->Pregunta_Ciudad
   }
 
 = Pregunta_Ciudad
-  VIDENTE
-  {Y ahora dime, ¿De donde vienes? | ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
+  SEER
+   {And now tell me, where do you come from? | Are you sure this place exists? | Lying to me can have consequences! }#ciudad
   {     
         -dataError: ->Pregunta_Ciudad
         -else: ->Eleccion_Final
   }
 
 = Eleccion_Final
-    FORASTERO
--  ¿Algo mas? #pause
-  VIDENTE
--  A ver muchacho, elige entre una de estas dos cartas. #pause 
+    STRANGER
+-  Anything else? #pause
+   SEER
+- Let's see boy, choose between one of these two cards. #pause
 -  #initPuzzle
    -> END
 
