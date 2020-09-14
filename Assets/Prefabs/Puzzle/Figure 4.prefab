@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8890517561200894061}
   - component: {fileID: -2668763762326657047}
   - component: {fileID: 6936142672101453030}
-  - component: {fileID: 482154845832412176}
+  - component: {fileID: 3525355115507870689}
   m_Layer: 0
   m_Name: Figure 4
   m_TagString: CorrectPosition
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3675748107452448222, guid: 26b8da7861a00d940860d3e90adc6e66,
+  m_Sprite: {fileID: -2387054950665905633, guid: d1860b2511239c546ad8c04a62bdc321,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.45}
   m_EdgeRadius: 0
---- !u!114 &482154845832412176
+--- !u!114 &3525355115507870689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5244121324593710076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc84bbc425c1d3e4abd1153ec1ff1f28, type: 3}
+  m_Script: {fileID: 11500000, guid: c97260f9fe343a643b7ef21b20116b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
