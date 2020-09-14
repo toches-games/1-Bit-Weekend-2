@@ -11,7 +11,7 @@ public class FinalNarrative : MonoBehaviour
 {
     public static event Action<Story> OnCreateStory;
 
-    public static string finalNumber = "finalOne";
+    public static string finalNumber;
 
     [SerializeField]
     private TextAsset inkJSONAsset = null;
