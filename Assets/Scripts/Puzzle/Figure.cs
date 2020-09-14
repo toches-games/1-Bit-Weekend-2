@@ -18,6 +18,9 @@ public class Figure : MonoBehaviour
 
     //Rotacion inicial de la figura
     public Quaternion TargetRotation { get; set; }
+
+    //Card
+    public Sprite card;
     
     #endregion
 
@@ -56,6 +59,8 @@ public class Figure : MonoBehaviour
         //Si choca con el espacio en blanco siendo este la posición correcta
         if(other.transform.GetSiblingIndex() == TargetIndex)
         {
+            GetComponent<SpriteRenderer>().sprite = card;
+
             //Sound
             ControllerSound.Instance.Item.Play();
             ControllerSound.Instance.Item.EventInstance.setParameterByName("HoroscopeTake", 0);
