@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{707972e1-8d7c-4a91-979c-3b2535e98407}">
+		<property name="name">
+			<value>Wheesel</value>
+		</property>
+		<relationship name="folder">
+			<destination>{57489917-938e-42f0-9f30-bc4f5be7a694}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{73b2ff95-7dcd-4225-a411-8d37f36de320}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{73b2ff95-7dcd-4225-a411-8d37f36de320}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

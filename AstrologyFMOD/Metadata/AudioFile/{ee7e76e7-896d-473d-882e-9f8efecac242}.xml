@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ee7e76e7-896d-473d-882e-9f8efecac242}">
+		<property name="assetPath">
+			<value>Music/MusicGoodCardAstrology.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>20.271020408163267</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2acdb2ac-8004-405e-94f3-9d710f9441dd}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{32791aa2-a239-40aa-b0f1-338fe8b1d7f0}">
+		<property name="assetPath">
+			<value>TakeItem.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.7616326530612243</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2acdb2ac-8004-405e-94f3-9d710f9441dd}</destination>
+		</relationship>
+	</object>
+</objects>
