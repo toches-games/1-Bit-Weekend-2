@@ -273,12 +273,12 @@ public class BasicInkExample : MonoBehaviour {
             {
                 if(variablesOfDecision[2] == "Derecha")
                 {
-                    FinalNarrative.finalNumber = 1;
+                    FinalNarrative.finalNumber = "finalOne";
                 }
 
                 else
                 {
-                    FinalNarrative.finalNumber = 2;
+                    FinalNarrative.finalNumber = "finalTwo";
                 }
             }
 
@@ -286,12 +286,12 @@ public class BasicInkExample : MonoBehaviour {
             {
                 if (variablesOfDecision[2] == "Derecha")
                 {
-                    FinalNarrative.finalNumber = 3;
+                    FinalNarrative.finalNumber = "finalThree";
                 }
 
                 else
                 {
-                    FinalNarrative.finalNumber = 4;
+                    FinalNarrative.finalNumber = "finalFour";
                 }
             }
         }
@@ -302,12 +302,12 @@ public class BasicInkExample : MonoBehaviour {
             {
                 if (variablesOfDecision[2] == "Derecha")
                 {
-                    FinalNarrative.finalNumber = 5;
+                    FinalNarrative.finalNumber = "finalFive";
                 }
 
                 else
                 {
-                    FinalNarrative.finalNumber = 6;
+                    FinalNarrative.finalNumber = "finalSix";
                 }
             }
 
@@ -315,12 +315,12 @@ public class BasicInkExample : MonoBehaviour {
             {
                 if (variablesOfDecision[2] == "Derecha")
                 {
-                    FinalNarrative.finalNumber = 3;
+                    FinalNarrative.finalNumber = "finalThree";
                 }
 
                 else
                 {
-                    FinalNarrative.finalNumber = 6;
+                    FinalNarrative.finalNumber = "finalSix";
                 }
             }
         }

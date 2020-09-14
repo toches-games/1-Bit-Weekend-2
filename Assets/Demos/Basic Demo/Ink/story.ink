@@ -16,7 +16,8 @@ VAR dataError = false
 
  = Conver_inicial 
  #initConversation
-  - ¿Qué te trae por aquí? Buen hombre 
+  - VIDENTE
+  ¿Qué te trae por aquí? Buen hombre 
         *[Caminaba por estos lares y vi esta carpa]
         ¿Entonces quieres escuchar tu futuro?
                 * *[Mmmh… Puede ser]
@@ -24,7 +25,7 @@ VAR dataError = false
                 * *[¡Por supuesto que sí!] -> Quiero_Saberlo
                         
         *(Quiero_Saberlo) [Quiero saber mi futuro]
-        Oh vaya… Se te escucha muy decidido. 
+        Oh vaya… Se te escucha muy decidido. #pause
         ¿Por qué tanto deseo en saberlo? ->Conver_final 
 
  = Conver_final

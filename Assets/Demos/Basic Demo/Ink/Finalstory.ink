@@ -11,83 +11,179 @@ VAR finalSix = false
 ->Introduccion
 == Introduccion ==
 
-{finalOne:
-  - VIDENTE:
-    Ha salido en Corazón Roto representa la Muerte,
-    carta que inspira miedo, pero erróneamente porque, por el contrario, es la vida en su sentido más puro. 
-    Se cree, de hecho, la renovación total al final de cualquier capítulo de la vida.
-  - FORASTERO:
-    ¿Y eso es malo o es bueno? No quiero morir!!! #pause
-  - VIDENTE:
-    No he dicho que vaya a morir nadie. Aquí solo dice que algo en tu vida va cambiar mucho un giro de 180º en sentido contrario. Algo imprevisto, de una faceta de tu vida que hasta ahora has descuidado mucho. ¿Estás preparado para ese reto?
-}
-{finalTwo:
-  - VIDENTE:
-    Enhorabuena te ha salido la Rueda significa el Viaje por excelencia, de la independencia, 
-    de la conquista y de la expansión, fin matrimonial, los viajes inseguros y peligrosos, el pánico, la confusión e incluso la ruina.
-  - FORASTERO:
-    Pero si es eso exactamente lo que hago, viajar 
-    ¿Qué me está diciendo que voy a estar así para siempre?. 
+{
+-finalOne:
+   VIDENTE
+    Ha salido el Corazón Roto
+    representa la Muerte, carta que inspira 
+    miedo  #pause
+   VIDENTE
+    pero erróneamente porque por el 
+    contrario es la vida
+    en su sentido más puro #pause
+    VIDENTE
+    Se cree, de hecho, la renovación total
+    al final de cualquier capítulo de la vida #pause
+   FORASTERO
+    ¿Y eso es malo o es bueno? 
+    No quiero morir!!! #pause
+   VIDENTE
+    No he dicho que vaya a morir alguien aquí 
+    solo dice que algo en tu vida va cambiar 
+    un giro de 180º en sentido contrario #pause
+    VIDENTE
+    algo imprevisto, de una faceta de tu vida 
+    que hasta ahora has descuidado mucho
+    ¿Estás preparado para ese reto?#pause
+
+-finalTwo:
+   VIDENTE
+    Enhorabuena te ha salido la Rueda 
+    significa el Viaje por excelencia #pause
+    VIDENTE
+    Viaje de la independencia
+    de la conquista y de la expansión 
+    fin matrimonial #pause
+    VIDENTE
+    los viajes inseguros y peligrosos 
+    el pánico, la confusión e incluso la ruina. #pause
+   FORASTERO
+    Pero si eso exactamente es lo que hago
+    viajar #pause
+    FORASTERO
+    ¿Qué me está diciendo que voy a estar
+    así para siempre?#pause
+    FORASTERO
     No lo entiendo. #pause
-  - VIDENTE:
-    Los viajes inciertos son, pero eso no significa que sean para siempre, 
-    para una persona que vive en una ciudad puede significar que le viene una mudanza. 
-    Pero para alguien nómada como tu puede significar que el próximo viaje puede ser el último
-    ya sea porque algo te retendrá o por la propia muerte.
-    Pero me atrevería a decir que se deberá a una persona, un niño. #pause
-  - FORASTERO:
-    Mi hermano pequeño!!!
-}
-{finalThree:
-  - VIDENTE:
-    Vaya vaya vaya… La Estrella
+   VIDENTE
+    Los viajes inciertos son, pero eso 
+    no significa que sean para siempre #pause
+    VIDENTE
+    para una persona que vive en una ciudad 
+    puede significar que le viene una mudanza #pause
+    VIDENTE
+    Pero para alguien nómada como tu 
+    puede significar que el próximo viaje 
+    puede ser el último #pause
+    VIDENTE
+    ya sea porque algo te detendrá 
+    o por la propia muerte #pause
+    VIDENTE
+    Pero me atrevería a decir que se deberá 
+    a una persona, un niño. #pause
+   FORASTERO
+    Mi hermano pequeño!!! #pause
 
-  - FORASTERO:
+-finalThree:
+   VIDENTE
+    Vaya vaya vaya… La Estrella #pause
+   FORASTERO
     ¿Qué pasa? eso es malo? #pause
-  - VIDENTE:
-  ¿Por qué todos preguntan si las cartas son malas y no si son buenas? 
-  La Estrella son Prospectos brillantes, éxito y ayuda amistosa, prosperidad y revelaciones, una fortuna pasiva y generosidad, belleza y romance. #pause 
-  Puede ser que te suceda una de ella o todas, pero algo es seguro un nuevo camino se abrirá ante tí y deberás elegir un camino
-  la estrella te guiará por él pero serás tú quien lo elija. 
-  El camino de la generosidad donde tus bienes sean cambiados por amor, cercanía y amistad o la avaricia repleta de bienes y prosperidad material. 
-  Tu eliges.
+   VIDENTE
+  ¿Por qué todos preguntan si las cartas 
+  son malas y no, si son buenas? #pause
+  VIDENTE
+  La Estrella significa Prospectos Brillantes
+  éxito y ayuda amistosa, prosperidad y 
+  revelaciones #pause 
+  VIDENTE
+  una fortuna pasiva y generosa 
+  belleza y romance #pause
+  VIDENTE
+  Puede ser que te suceda una de ellas
+  o quiza todas, pero algo es seguro
+  un nuevo camino se abrirá ante tí #pause
+  VIDENTE
+  la estrella te guiará por él 
+  pero serás tú quien lo elija #pause
+  VIDENTE
+  El camino de la generosidad 
+  donde tus bienes son cambiados por amor
+  cercanía y amistad #pause
+  VIDENTE
+  O la avaricia, repleta 
+  de bienes y prosperidad material #pause
+  VIDENTE
+  Tu eliges. #pause
 
-
-}
-{finalFour:
-  - VIDENTE:
-    En fin. Lo que temía. La Espada.
-
-  - FORASTERO:
+-finalFour:
+   VIDENTE
+    En fin, lo que temía, la Espada. #pause
+   FORASTERO
     ¿Qué pasa con eso, debería comprarme una? #pause
+   VIDENTE
+    Significa el precio a pagar, la renuncia
+    el arrepentimiento, el extasis 
+    y el castigo forzado #pause
+    VIDENTE
+    el egocentrismo y las ilusiones
+    hábitos nefastos sazonados por la 
+    angustia y el miedo #pause
+    VIDENTE
+    Ya deberias saber que pasa con eso
+    porque si no me equivoco #pause
+    VIDENTE
+    ya has empezado a abandonar 
+    aquello de donde vienes #pause
+    VIDENTE
+    Significa que huyes de algo 
+    y que vas a arrepentirte #pause
+    VIDENTE
+    O que te estás forzando a huir 
+    como castigo 
+    por algo que crees que es culpa tuya. #pause
 
-  - VIDENTE:
-    Significa el precio a pagar, la renuncia, el arrepentimiento, la extasis y el castigo forzado 
-    el egocentrismo y las ilusioneshábitos nefastos sazonados por la angustia y el miedo. Y
-    a debería saber que pasa con eso. Porque si no me equivoco ya has empezado a abandonar aquello de donde vienes. 
-    Significa que huyes de algo y que vas a arrepentirte 
-    o que te estás forzando a huir como castigo por algo que crees que es culpa tuya.
-
-}
-{finalFive: 
-  - VIDENTE:
-    Mmm… interesante sin duda, te ha salido La Luna.
-
-  - FORASTERO:
+-finalFive: 
+   VIDENTE
+    Mmm… interesante sin duda 
+    te ha salido La Luna. #pause
+   FORASTERO
     ¿Interesante porqué? #pause
-  
-  - VIDENTE:
-    Porque significa peligros escondidos, ocultos, imaginación fantástica
-    error y mala influencia externa, mentiras, indolencia, secretos y personas lunáticas. 
-    Eso significa que tus decisiones te llevan por caminos que no debieran. 
-    Y no para bien, por eso estás buscando un nuevo 
-    significado a tu futuro, porque quieres huir de él. #pause
-    Pero no vas a huir porque tus decisiones te llevan directo
-    de nuevo a él, a tus errores, a tu pesar, a tu condena. 
+   VIDENTE
+    Porque significa peligros escondidos
+    ocultos, imaginación fantástica #pause
+    VIDENTE
+    error y mala influencia externa, 
+    mentiras, indolencia, secretos 
+    y personas lunáticas. #pause
+    VIDENTE
+    Eso significa que tus decisiones 
+    te llevan por caminos que no debieran #pause
+    VIDENTE
+    Y no para bien, por eso estás buscando 
+    un nuevo significado a tu futuro 
+    porque quieres huir de él. #pause
+    VIDENTE
+    Pero no vas a huir porque tus decisiones 
+    te llevan directo de nuevo a él, 
+    a tus errores, a tu pesar, a tu condena. #pause
+    VIDENTE
     ¿Un consejo? 
-    No huyas más, afrontalo y dejarás de huir de ello, serás libre.
+    No huyas más, afrontalo y dejarás 
+    de huir de ello, serás libre. #pause
 
+-finalSix: 
+   VIDENTE
+    Mi más sincera enhorabuena 
+    El Árbol #pause
+    VIDENTE
+    Significado positivo de triunfo 
+    y recompensa, realización total #pause
+    VIDENTE
+    seguridad y logro de las más altas 
+    aspiraciones, éxito duradero #pause
+    VIDENTE
+    Recompensa por las labores, 
+    crecimiento y fortaleza. #pause
+    VIDENTE
+    Sin duda la mejor de las cartas 
+    sin mala interpretación posible. #pause
+    VIDENTE
+    Vienes buscando algo y lo vas a 
+    encontrar, tu camino llega a su fin 
+    podrás descansar y sentirte libre. #pause
 
+-else: ->END
 }
-{finalSix: }
+
 ->END

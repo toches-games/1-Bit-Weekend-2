@@ -11,7 +11,7 @@ public class FinalNarrative : MonoBehaviour
 {
     public static event Action<Story> OnCreateStory;
 
-    public static int finalNumber;
+    public static string finalNumber = "finalFive";
 
     [SerializeField]
     private TextAsset inkJSONAsset = null;
@@ -29,6 +29,7 @@ public class FinalNarrative : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find(finalNumber).GetComponent<Image>().enabled = true;
         next = false;
         //Remove the default message
         RemoveChildren();
@@ -50,6 +51,7 @@ public class FinalNarrative : MonoBehaviour
     {
         story = new Story(inkJSONAsset.text);
         if (OnCreateStory != null) OnCreateStory(story);
+        story.variablesState[finalNumber] = true;
         StartCoroutine(RefreshView());
     }
 
@@ -91,7 +93,11 @@ public class FinalNarrative : MonoBehaviour
                     RemoveChildren();
                 }
             }
-
+        }
+        if (!story.canContinue)
+        {
+            GameObject.Find("TimeLineOut").GetComponent<PlayableDirector>().Play();
+            RemoveChildren();   
         }
     }
 
@@ -113,6 +119,6 @@ public class FinalNarrative : MonoBehaviour
                 GameObject.Destroy(canvas.transform.GetChild(i).gameObject);
         }
     }
-
+    
 }
 
