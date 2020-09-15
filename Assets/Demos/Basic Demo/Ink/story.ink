@@ -3,50 +3,50 @@ VAR dataError = false
 ->Introduccion
 == Introduccion ==
 - Un hombre forastero y solitario va por un parque de atracciones bastante concurrido... #pause
-  El no se da cuenta de su alrededor, solo hace caso al hilo de sus pensamientos: #pause
+  Él no se da cuenta de su alrededor, solo hace caso al hilo de sus pensamientos: #pause
   //Presionar un boton
   FORASTERO
   "He viajado por años buscando mi destino" #pause
   FORASTERO
   "he anhelado poder encontrar que me depara el futuro…"#pause
   //Presionar un boton
-  De pronto y como salida de un espejismo vio una carpa de un vidente. #pause
+  De pronto y como salida de un espejismo vió una carpa de un vidente. #pause
   //Presionar boton
   FORASTERO
-  "¿Ese dia podria ser hoy?" #pause
+  "¿Ese día podría ser hoy?" #pause
   FORASTERO
-  Probare suerte #pause
+  Probaré suerte #pause
   Y entra sin pensarlo#pause
   ->Conver_inicial
   //Pantalla en negro, entra conversacion
 
  = Conver_inicial 
  #initConversation
-  - ¿Que te trae por aqui? Buen hombre 
+  - ¿Qué te trae por aquí? Buen hombre 
         *[Caminaba por estos lares y vi esta carpa]
         ¿Entonces quieres escuchar tu futuro?
                 * *[Mmmh… Puede ser]
-                ¿Por que tan dudoso? ->Conver_final
-                * *[¡Por supuesto que si!] -> Quiero_Saberlo
+                ¿Por qué tan dudoso? ->Conver_final
+                * *[¡Por supuesto que sí!] -> Quiero_Saberlo
                         
         *(Quiero_Saberlo) [Quiero saber mi futuro]
         Oh vaya… Se te escucha muy decidido. #pause
-        ¿Por que tanto deseo en saberlo? ->Conver_final 
+        ¿Por qué tanto deseo en saberlo? ->Conver_final 
 
  = Conver_final
   
         *[Le tengo miedo al futuro.]
         VIDENTE
-        Siendo sincero, ¿saber tu futuro te ayudaria realmente? #pause
+        Siendo sincero, ¿saber tu futuro te ayudaría realmente? #pause
         FORASTERO
-        ¡Claro que si!#pause
+        ¡Claro que sí!#pause
 
         *[Toda mi vida he pensado que me espera algo grande]
         
         -VIDENTE
         ¿Y si te espera algo horrible? #pause
         FORASTERO
-        Trataria de cambiarlo. #pause
+        Trataría de cambiarlo. #pause
         VIDENTE
         Muchacho, ¿El futuro realmente puede cambiarse? #pause
         FORASTERO
@@ -57,7 +57,7 @@ VAR dataError = false
 
 = Pregunta_Nacimiento
   VIDENTE
-  {¿En que fecha naciste? | Oh, ¿de verdad naciste en ese año? | Vaya... ¿Me estas tomando el pelo?} #fecha 
+  {¿En qué fecha naciste? | Oh, ¿de verdad naciste en ese año? | Vaya... ¿Me estas tomando el pelo?} #fecha 
   {     
         -dataError: ->Pregunta_Nacimiento
         -else: ->Pregunta_Ciudad
@@ -65,7 +65,7 @@ VAR dataError = false
 
 = Pregunta_Ciudad
   VIDENTE
-  {Y ahora dime, ¿De donde vienes? | ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
+  {Y ahora dime, ¿De dónde vienes? | ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
   {     
         -dataError: ->Pregunta_Ciudad
         -else: ->Eleccion_Final
@@ -73,7 +73,7 @@ VAR dataError = false
 
 = Eleccion_Final
     FORASTERO
--  ¿Algo mas? #pause
+-  ¿Algo más? #pause
   VIDENTE
 -  A ver muchacho, elige entre una de estas dos cartas. #pause 
 -  #initPuzzle
