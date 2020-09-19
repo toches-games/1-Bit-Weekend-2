@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'N' to skip text
+  m_Text: Press click to skip
 --- !u!114 &8298685778261164626
 MonoBehaviour:
   m_ObjectHideFlags: 0

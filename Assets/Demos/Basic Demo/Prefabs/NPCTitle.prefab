@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 11400932}
   - component: {fileID: -240571843446588301}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NPCTitle
   m_TagString: NarrativeObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4d36d2a7427ca3d43938d7c1ec27d42b, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 71b598e8431dcc74aa3eaa22bfa5957c, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -132,6 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.8509804}
+  m_EffectColor: {r: 0.22506414, g: 0.107333556, b: 0.6320754, a: 0.8509804}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1

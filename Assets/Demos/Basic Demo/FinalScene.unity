@@ -829,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 1017440562785087731, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 20
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1017440562785087731, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
@@ -894,7 +894,7 @@ PrefabInstance:
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.899994
+      value: -6.9000244
       objectReference: {fileID: 0}
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
@@ -909,7 +909,7 @@ PrefabInstance:
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 22.400703
+      value: 20.100693
       objectReference: {fileID: 0}
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
@@ -949,7 +949,7 @@ PrefabInstance:
     - target: {fileID: 9153712211049191667, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a756013dba99e8b4db37b8e0aea5b254, type: 3}
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!1 &1988300795
@@ -1839,6 +1839,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 4900000, guid: d2b54b19c65ef2748a34106706e7546b, type: 3}
   canvas: {fileID: 1908123726}
+  playerTitlePrefab: {fileID: 11456674, guid: 5cdf104a36fdaac499aaf9b57c8837a7, type: 3}
+  nPCTitlePrefab: {fileID: 11456674, guid: c4ca47f3d56c8144eaeadf564d1d5913, type: 3}
   textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
   skipText: {fileID: 1088545266}
 --- !u!4 &2009679605
