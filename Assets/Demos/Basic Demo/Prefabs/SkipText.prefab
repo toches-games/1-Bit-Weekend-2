@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -7.299988, y: -11.299988}
-  m_SizeDelta: {x: 206.41705, y: 32.372147}
+  m_AnchoredPosition: {x: -7.299988, y: -2.4100037}
+  m_SizeDelta: {x: 206.41705, y: 18.877495}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &9036161164484564853
 CanvasRenderer:
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Presiona 'N' para saltar
+  m_Text: Has click para saltar
 --- !u!114 &8298685778261164626
 MonoBehaviour:
   m_ObjectHideFlags: 0

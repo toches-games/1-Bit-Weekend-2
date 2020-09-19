@@ -1050,6 +1050,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1017440562785087731, guid: a756013dba99e8b4db37b8e0aea5b254,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1113,17 +1118,17 @@ PrefabInstance:
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 215.1297
+      value: 264.0702
       objectReference: {fileID: 0}
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 27.393494
+      value: 21.60556
       objectReference: {fileID: 0}
     - target: {fileID: 2130675616923877563, guid: a756013dba99e8b4db37b8e0aea5b254,
         type: 3}
@@ -1801,7 +1806,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!1 &1988300795
@@ -1887,6 +1892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   canvas: {fileID: 1908123726}
+  playerTitlePrefab: {fileID: 11456674, guid: 5cdf104a36fdaac499aaf9b57c8837a7, type: 3}
+  nPCTitlePrefab: {fileID: 11456674, guid: c4ca47f3d56c8144eaeadf564d1d5913, type: 3}
   textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
   inputPrefab: {fileID: 7523965911027632005, guid: 41506e1908c19584487c9df8c65c40da,

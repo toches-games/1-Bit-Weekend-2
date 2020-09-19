@@ -11,7 +11,7 @@ public class FinalNarrative : MonoBehaviour
 {
     public static event Action<Story> OnCreateStory;
 
-    public static string finalNumber;
+    public static string finalNumber = "finalTwo";
 
     [SerializeField]
     private TextAsset inkJSONAsset = null;
@@ -22,12 +22,19 @@ public class FinalNarrative : MonoBehaviour
 
     // UI Prefabs
     [SerializeField]
+    private Text playerTitlePrefab = null;
+    [SerializeField]
+    private Text nPCTitlePrefab = null;
+    [SerializeField]
     private Text textPrefab = null;
     private bool next;
     private bool keyDownEvent;
     private bool pause;
+    private bool skip;
     public GameObject skipText;
-
+    private bool finishCoroutine = false;
+    private const string NAME_PLAYER = "FORASTERO";
+    private const string NAME_NPC = "VIDENTE";
 
     void Start()
     {
@@ -41,11 +48,16 @@ public class FinalNarrative : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.N) && keyDownEvent)
+        if (Input.GetMouseButtonDown(0) && keyDownEvent)
         {
-            next = true;
             keyDownEvent = false;
-            skipText.SetActive(false);
+            skip = true;
+
+            if (finishCoroutine)
+            {
+                next = true;
+                skipText.SetActive(false);
+            }
 
         }
     }
@@ -64,7 +76,6 @@ public class FinalNarrative : MonoBehaviour
     // Continues over all the lines of text, then displays all the choices. If there are no choices, the story is finished!
     IEnumerator RefreshView()
     {
-        next = false;
         // Remove all the UI on screen
         RemoveChildren();
 
@@ -75,30 +86,39 @@ public class FinalNarrative : MonoBehaviour
         {
             // Continue gets the next line of the story
             string text = story.Continue();
+            string tag = "";
             // This removes any white space from the text.
             text = text.Trim();
-            // Display the text on screen!
-            CreateContentView(text);
+
+            pause = false;
+            next = false;
+            keyDownEvent = false;
 
             if (story.currentTags.Count > 0)
             {
-                string tag = story.currentTags[0];
+                tag = story.currentTags[0];
                 if (tag == "pause")
                 {
                     keyDownEvent = true;
                     pause = true;
                     skipText.SetActive(true);
 
-                }
-
-                if (pause)
+                }               
+                else
                 {
-                    next = false;
-                    pause = false;
-                    yield return new WaitUntil(() => next);
-                    RemoveChildren();
+                    skipText.SetActive(false);
                 }
             }
+
+            yield return StartCoroutine(CreateContentView(text));
+
+            if (pause)
+            {
+                yield return new WaitUntil(() => next);
+
+                RemoveChildren();
+            }
+
         }
         if (!story.canContinue)
         {
@@ -108,11 +128,51 @@ public class FinalNarrative : MonoBehaviour
     }
 
     // Creates a textbox showing the the line of text
-    void CreateContentView(string text)
+    IEnumerator CreateContentView(string text)
     {
-        Text storyText = Instantiate(textPrefab) as Text;
-        storyText.text = text;
-        storyText.transform.SetParent(canvas.transform, false);
+        Text storyText = null;
+        int lengthText = text.Length, i = 0;
+        //Text storyText = Instantiate(textPrefab) as Text;
+        keyDownEvent = true;
+        skip = false;
+        finishCoroutine = false;
+
+        if (text == NAME_PLAYER || text == NAME_NPC)
+        {
+            if (text == NAME_NPC)
+            {
+                storyText = Instantiate(playerTitlePrefab) as Text;
+            }
+            else
+            {
+                storyText = Instantiate(nPCTitlePrefab) as Text;
+            }
+            storyText.transform.SetParent(canvas.transform, false);
+            storyText.text = text;
+            yield return new WaitForSeconds(0.35f);
+        }else{
+            storyText = Instantiate(textPrefab) as Text;
+            storyText.transform.SetParent(canvas.transform, false);
+
+            for (i = 0; i < lengthText; i++)
+            {
+                if (skip)
+                {
+                    storyText.text = storyText.text + text.Substring(i);
+                    keyDownEvent = true;
+                    break;
+                }
+                char c = text[i];
+                storyText.text = storyText.text + c;
+                yield return new WaitForSeconds(0.09f);
+            }
+        }
+        if (i == lengthText)
+        {
+            yield return new WaitForSeconds(0.9f);
+            next = true;
+        }
+        finishCoroutine = true;
     }
 
     // Destroys all the children of this gameobject (all the UI)

@@ -57,7 +57,7 @@ VAR dataError = false
 
 = Pregunta_Nacimiento
   VIDENTE
-  {¿En qué fecha naciste? | Oh, ¿de verdad naciste en ese año? | Vaya... ¿Me estas tomando el pelo?} #fecha 
+  {¿En qué año naciste? | Oh, ¿de verdad naciste en ese año? | Vaya... ¿Me estas tomando el pelo?} #fecha 
   {     
         -dataError: ->Pregunta_Nacimiento
         -else: ->Pregunta_Ciudad
@@ -65,7 +65,7 @@ VAR dataError = false
 
 = Pregunta_Ciudad
   VIDENTE
-  {Y ahora dime, ¿De dónde vienes? | ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
+  {Y ahora dime, ¿De que ciudad provienes? | ¿Estas seguro que existe este lugar? | ¡Mentirme puede traer consecuencias! }#ciudad
   {     
         -dataError: ->Pregunta_Ciudad
         -else: ->Eleccion_Final
